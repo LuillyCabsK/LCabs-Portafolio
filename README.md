@@ -11,7 +11,7 @@
 
 ### About Me
 
-- 🎓 **Education:** Industrial Engineering (9th semester) at Universidad del Cauca + Software Development Certificate at BYU-Pathway Worldwide.
+- 🎓 **Education:** Agroindustrial Engineering (9th semester) at University of Cauca (2016-2027, in progress) + Software Development Certificate at BYU-Pathway Worldwide (2024-present) + Front-End Development Certificate at Alura Latam (2024-2025, completed).
 - 💻 **Main skills:** JavaScript (ES6+), React, HTML5, CSS3, Git, REST APIs.
 - 🌎 **Languages:** Spanish (native), English (B2 / Intermediate-Advanced).
 - 🎯 **Goal:** To land my first role as a Junior Frontend Developer, combining my analytical mindset with my passion for building great user experiences.
