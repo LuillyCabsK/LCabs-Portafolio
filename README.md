@@ -3,7 +3,7 @@
 - Email: luillycbs@gmail.com
 - LinkedIn: https://www.linkedin.com/in/luilly-cabrera/
 
-# Mi Portafolio de Desarrollo Frontend / My Frontend Development Portfolio
+#  My Frontend Development Portfolio
 
 ---
 
