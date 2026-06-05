@@ -207,3 +207,34 @@
     flex-direction: column;
     padding: 2%;
 }
+
+/* skills presentacion */
+/* Skills generales - todas las secciones */
+.technicalSkills, .professionalSkills, .othersSkills, .uniqueSkills, .softSkills, .languagesSkills {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(140px, auto));
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+/* Estilo de cada skill individual (para que se vean como tarjetitas) */
+.technicalSkills, .professionalSkills, .othersSkills, .uniqueSkills, .softSkills, .languagesSkills {
+    font-size: 1rem;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.technicalSkills i:hover,
+.professionalSkills i:hover,
+.othersSkills i:hover,
+.uniqueSkills i:hover,
+.softSkills i:hover,
+.languagesSkills i:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
