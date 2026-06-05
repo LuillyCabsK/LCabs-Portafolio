@@ -1,29 +1,72 @@
-/* Reset de estilos básicos */
+/* ===== VARIABLES DE COLOR ===== */
+:root {
+    --crema: #FFF9F0;
+    --hueso: #F5E6D3;
+    --verde: #2A7F49;
+    --mostaza: #E6A017;
+    --azul-rey: #1E3A8A;
+}
 
+/* ===== RESET ===== */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/* header */
-.head_bar{
+/* ===== HEADER MEJORADO ===== */
+.head_bar {
     display: flex;
-    flex-direction:row;
-    width: auto; 
-    padding: 2%;
-    gap: 10px;
-    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     background-color: #eceed1;
+    padding: 1rem 2rem;
+    gap: 1rem;
 }
 
-.barRight{
+.barLeft {
+    text-align: left;
+}
+
+.nombre-header {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0;
+    color: var(--azul-rey, #1e3a8a);
+}
+
+.tagline-header {
+    font-size: 0.8rem;
+    margin: 0;
+    color: var(--verde, #2a7f49);
+}
+
+.barRight {
     display: flex;
-    gap: 10px;
-    align-items: right; 
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-/* primer plano*/
+.barRight a {
+    text-decoration: none;
+    color: #000;
+    padding: 0.3rem 0.8rem;
+    transition: background 0.2s;
+}
+
+.barRight a:hover {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+.barRight p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* ===== PRESENTACIÓN (INDEX) ===== */
 .presentacion {
     display: flex;
     flex-direction: column;
@@ -39,15 +82,6 @@
 .presentacion_texto {
     margin-top: 20px;
     width: 100%;
-}
-
-.presentacion_titulo{
-    display: flex;
-    justify-content: center;
-
-}
-.presentacion_introduccion{
-    display: flex;
 }
 
 .presentacion__imagen {
@@ -73,8 +107,8 @@
     flex-wrap: wrap;
 }
 
-/*Biografia*/
-.biografia{
+/* ===== BIOGRAFÍA ===== */
+.biografia {
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -83,13 +117,13 @@
     padding-top: 0;
 }
 
-.biografiaTitulo{
+.biografiaTitulo {
     display: flex;
     justify-content: left;
     margin-bottom: 10px;
 }
 
-.biografiaTexto{
+.biografiaTexto {
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
@@ -107,14 +141,22 @@
     height: auto;
 }
 
-/*multipaginas*/
-/* Estilos específicos para formación académica */
-.grid-formacion {
+/* ===== TÍTULOS DE SECCIÓN (para formación, skills, etc.) ===== */
+.tituloSeccion {
+    font-size: 1.8rem;
+    color: var(--azul-rey, #1e3a8a);
+    margin: 2rem 0 1rem 0;
+    border-left: 5px solid var(--mostaza, #e6a017);
+    padding-left: 1rem;
+}
+
+/* ===== TARJETAS DE FORMACIÓN / EXPERIENCIA ===== */
+.grid-formacion,
+.grid-experiencia {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 1.5rem;
     margin: 1.5rem 0;
-
 }
 
 .card-formacion {
@@ -168,60 +210,51 @@
     line-height: 1.4;
     margin-top: 0.3rem;
 }
-/* Nuevo header mejorado */
-.head_bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: #eceed1;
-    padding: 1rem 2rem;
+
+/* ===== SKILLS (página skills.html) ===== */
+/* Contenedores en grid */
+.technicalSkills,
+.professionalSkills,
+.othersSkills,
+.uniqueSkills,
+.softSkills,
+.languagesSkills {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(140px, auto));
     gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
 }
 
-.barLeft {
-    text-align: left;
-}
-
-.nombre-header {
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin: 0;
-    color: var(--azul-rey, #1e3a8a);
-}
-
-.tagline-header {
-    font-size: 0.8rem;
-    margin: 0;
-    color: var(--verde, #2a7f49);
-}
-
-.barRight {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.barRight a {
-    text-decoration: none;
-    color: #000;
-    padding: 0.3rem 0.8rem;
-    transition: background 0.2s;
-}
-
-.barRight a:hover {
-    background-color: #e0e0e0;
-    border-radius: 5px;
-}
-
-.barRight p {
-    margin: 0;
+/* Cada ítem individual (los <i>) */
+.technicalSkills i,
+.professionalSkills i,
+.othersSkills i,
+.uniqueSkills i,
+.softSkills i,
+.languagesSkills i {
+    background: white;
+    padding: 0.6rem 0.8rem;
+    border-radius: 30px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    font-style: normal;
     font-size: 0.9rem;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/*espacio iconos*/
-.skills{
+.technicalSkills i:hover,
+.professionalSkills i:hover,
+.othersSkills i:hover,
+.uniqueSkills i:hover,
+.softSkills i:hover,
+.languagesSkills i:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ===== SECCIONES VIEJAS (posiblemente obsoletas, pero se conservan) ===== */
+.skills {
     background-color: #f0e1e1;
     display: flex;
     align-items: center;
@@ -229,16 +262,16 @@
     flex-direction: column;
     padding: 1%;
 }
-.tituloSkills{
+.tituloSkills {
     display: flex;
     margin-bottom: 1%;
 }
-.iconosSkills{
+.iconosSkills {
     display: flex;
     gap: 20px;
 }
 
-.hobbies{
+.hobbies {
     background-color: #f3efce;
     display: flex;
     align-items: center;
@@ -246,57 +279,50 @@
     flex-direction: column;
     padding: 1%;
 }
-.tituloHobbies{
+.tituloHobbies {
     display: flex;
     margin-bottom: 1%;
 }
-.iconosHobbies{
+.iconosHobbies {
     display: flex;
     gap: 20px;
 }
-.experiencia{
+
+.experiencia {
     background-color: #d0f2f5;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 1%;
-    
 }
-
-.tituloExperiencia{
+.tituloExperiencia {
     display: flex;
     margin-bottom: 1%;
 }
-
-.iconosExperiencia{
+.iconosExperiencia {
     display: flex;
     gap: 20px;
 }
 
-/*formacion academica*/
-.academics{
+.academics {
     background-color: #ffffff;
     display: flex;
     justify-content: center;
     padding: 10%;
-
 }
-
-.evenflowAcademics{
+.evenflowAcademics {
     display: flex;
     margin-bottom: 5%;
     align-items: center;
 }
-
-.allAcademics{
+.allAcademics {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
     gap: 10px;
 }
-
-.colombiaAcademics{
+.colombiaAcademics {
     width: 100px;
     border: 1px solid #0a0909;
     border-radius: 8px;
@@ -304,23 +330,21 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     text-align: center;
-
 }
-.colombiaAcademicsSena{
+.colombiaAcademicsSena {
     width: 100%;
     height: auto;
     display: block;
 }
-
-.colombiaAcademicsTexto{
+.colombiaAcademicsTexto {
     padding: 10px;
     font-size: 16px;
-    color: #333;   
+    color: #333;
 }
 
-/*footer*/
+/* ===== FOOTER ===== */
 .footer {
-    background-color: var(--hueso, #f5f0e1);  /* un color crema suave */
+    background-color: var(--hueso, #f5f0e1);
     border-top: 3px solid var(--mostaza, #e6a017);
     padding: 2rem 1rem;
     text-align: center;
@@ -339,35 +363,4 @@
     font-size: 1.2rem;
     color: var(--verde, #2a7f49);
     margin-top: 0.5rem;
-}
-
-/* skills presentacion */
-/* Skills generales - todas las secciones */
-.technicalSkills, .professionalSkills, .othersSkills, .uniqueSkills, .softSkills, .languagesSkills {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(140px, auto));
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-/* Estilo de cada skill individual (para que se vean como tarjetitas) */
-.technicalSkills, .professionalSkills, .othersSkills, .uniqueSkills, .softSkills, .languagesSkills {
-    font-size: 1rem;
-    background: white;
-    padding: 0.5rem 1rem;
-    border-radius: 30px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.technicalSkills i:hover,
-.professionalSkills i:hover,
-.othersSkills i:hover,
-.uniqueSkills i:hover,
-.softSkills i:hover,
-.languagesSkills i:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
