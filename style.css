@@ -211,6 +211,48 @@
     margin-top: 0.3rem;
 }
 
+.card-experiencia {
+    background: white;
+    border-radius: 20px;
+    padding: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card-experiencia:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.card-experiencia .card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+.card-experiencia .card-header i {
+    font-size: 1.8rem;
+    color: var(--verde, #2a7f49);
+}
+.card-experiencia .card-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--azul-rey, #1e3a8a);
+}
+.empresa {
+    font-weight: 600;
+    color: #444;
+    margin: 0.2rem 0;
+}
+/* Ya tienes .fecha y ul, li, pero puedes añadir: */
+.card-experiencia ul {
+    margin: 0.5rem 0 0 1rem;
+    padding-left: 0;
+}
+.card-experiencia li {
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
 /* ===== SKILLS (página skills.html) ===== */
 /* Contenedores en grid */
 .technicalSkills,
