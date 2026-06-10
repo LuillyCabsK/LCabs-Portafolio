@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="cuotas.css">
     <script src="https://kit.fontawesome.com/0ab2b19b31.js" crossorigin="anonymous"></script>
-    <script src="honeyComb.js"></script>
     <script src="i18n.js" defer></script>
 </head>
 <body>
@@ -30,37 +29,46 @@
         <div class="honeycomb-wrapper">
             <div class="honeycomb-container">
                 <div class="honeycomb-orbit">
+                    <!-- Hexágono 1: Juego de Decisiones -->
                     <button class="hex hex-p1 hex-img-1"
                             data-titulo-key="proyecto.juego_titulo" data-info-key="proyecto.juego_info"
                             data-titulo="🎮 Juego de Decisiones" data-info="Aventura textual con múltiples finales e interactividad...">
                         <div class="hex-bg"></div><span class="hex-emoji">🎮</span>
                     </button>
+                    <!-- Hexágono 2: PokéWiki -->
                     <button class="hex hex-p2 hex-img-2"
                             data-titulo-key="proyecto.pokewiki_titulo" data-info-key="proyecto.pokewiki_info"
                             data-titulo="⚡ PokéWiki" data-info="Buscador de Pokémon dinámico desarrollado con React...">
                         <div class="hex-bg"></div><span class="hex-emoji">⚡</span>
                     </button>
+                    <!-- Hexágono 3: Web Scouts Cauca -->
                     <button class="hex hex-p3 hex-img-3"
                             data-titulo-key="proyecto.scouts_titulo" data-info-key="proyecto.scouts_info"
                             data-titulo="🏕️ Web Scouts Cauca" data-info="Sitio informativo regional para la Asociación de Scouts...">
                         <div class="hex-bg"></div><span class="hex-emoji">🏕️</span>
                     </button>
+                    <!-- Hexágono 4: App Hotel Abuela -->
                     <button class="hex hex-p4 hex-img-4"
                             data-titulo-key="proyecto.hotel_titulo" data-info-key="proyecto.hotel_info"
                             data-titulo="🏨 App Hotel de mi abuela" data-info="Sistema de gestión de reservas y administración...">
                         <div class="hex-bg"></div><span class="hex-emoji">🏨</span>
                     </button>
+                    <!-- Hexágono 5 (p6): Buscador de Recetas -->
                     <button class="hex hex-p6 hex-img-6"
                             data-titulo-key="proyecto.recetas_titulo" data-info-key="proyecto.recetas_info"
                             data-titulo="🍲 Buscador de Recetas" data-info="Explora platos del mundo e ingredientes gastronómicos...">
                         <div class="hex-bg"></div><span class="hex-emoji">🍲</span>
                     </button>
+                    <!-- Hexágono 6 (p7): ruN4UlifE (reemplaza el antiguo "Próximo Proyecto") -->
                     <button class="hex hex-p7 hex-img-7"
-                            data-titulo-key="proyecto.proximo_titulo" data-info-key="proyecto.proximo_info"
-                            data-titulo="🚀 Próximo Proyecto" data-info="Espacio reservado para una nueva e increíble aplicación...">
-                        <div class="hex-bg"></div><span class="hex-emoji">🚀</span>
+                            data-titulo="🐍 ruN4UlifE: Aventura en Python"
+                            data-info-type="iframe"
+                            data-url="https://python-journey--luillycbs.replit.app/"
+                            data-github="https://github.com/LuillyCabsK/LCabs-Portafolio/tree/main/ruN4UlifE-Survival">
+                        <div class="hex-bg"></div><span class="hex-emoji">🐍</span>
                     </button>
                 </div>
+                <!-- Hexágono central: Calculadora de Notas -->
                 <button class="hex hex-center hex-img-5"
                         data-titulo-key="proyecto.notas_titulo" data-info-key="proyecto.notas_info"
                         data-titulo="📊 Calculadora de Notas" data-info="Calcula tu nota necesaria para aprobar tus materias...">
@@ -79,7 +87,81 @@
         <p data-i18n="footer.text">Este portafolio lo construí paso a paso, aprendiendo cada línea. Recibí mentoría y orientación de ‘La Ballena’ 🐋, un desarrollador con años de experiencia que me guió en la arquitectura, buenas prácticas y debugging. Todo el código fue escrito por mí, entendiendo cada decisión.</p>
         <p><a href="#" id="reset-lang" style="color: var(--mostaza); text-decoration: underline; cursor: pointer;">🌐 Cambiar idioma / Change language</a></p>
         <i class="fa-solid fa-dragon"></i>
-        
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hexagons = document.querySelectorAll('.hex:not(.spacer)');
+            const infoPanel = document.getElementById('info-panel');
+            const infoTitle = document.getElementById('info-title');
+            const infoDesc = document.getElementById('info-desc');
+            const infoLink = document.getElementById('info-link');
+            let currentActive = null;
+
+            // Función para actualizar el panel con texto normal
+            function updatePanelWithText(title, description, url) {
+                // Restaurar la estructura original del panel (por si antes se puso un iframe)
+                infoPanel.innerHTML = `
+                    <h3 id="info-title" data-i18n="proyectos.panel_titulo">✨ Proyecto destacado</h3>
+                    <p id="info-desc" data-i18n="proyectos.panel_desc">Haz clic en un hexágono para conocer más sobre cada proyecto.</p>
+                    <a href="#" id="info-link" class="btn-demo" style="display: none;" target="_blank" data-i18n="proyectos.ver_demo">Ver demo →</a>
+                `;
+                // Re-asignar referencias (porque el DOM cambió)
+                const newInfoTitle = document.getElementById('info-title');
+                const newInfoDesc = document.getElementById('info-desc');
+                const newInfoLink = document.getElementById('info-link');
+                if (newInfoTitle) newInfoTitle.textContent = title;
+                if (newInfoDesc) newInfoDesc.textContent = description;
+                if (newInfoLink) {
+                    if (url && url !== '#') {
+                        newInfoLink.href = url;
+                        newInfoLink.style.display = 'inline-block';
+                    } else {
+                        newInfoLink.style.display = 'none';
+                    }
+                }
+            }
+
+            // Función para actualizar el panel con iframe (para el juego de Python)
+            function updatePanelWithIframe(title, iframeUrl, githubUrl) {
+                infoPanel.innerHTML = `
+                    <div style="text-align: center;">
+                        <h3 style="color: var(--azul-rey); margin-bottom: 1rem;">${title}</h3>
+                        <iframe src="${iframeUrl}" style="width: 100%; height: 400px; border: none; border-radius: 12px; margin-bottom: 1rem;"></iframe>
+                        <a href="${githubUrl}" target="_blank" style="display: inline-block; background: var(--verde); color: white; padding: 0.5rem 1rem; border-radius: 8px; text-decoration: none;">📂 Ver código en GitHub</a>
+                    </div>
+                `;
+            }
+
+            hexagons.forEach(hex => {
+                hex.addEventListener('click', () => {
+                    const title = hex.getAttribute('data-titulo') || 'Proyecto';
+                    const description = hex.getAttribute('data-info') || 'Proyecto en desarrollo.';
+                    const url = hex.getAttribute('data-url') || '';
+                    const githubUrl = hex.getAttribute('data-github');
+                    const infoType = hex.getAttribute('data-info-type');
+
+                    // Si es el proyecto especial (con data-info-type="iframe"), mostrar iframe
+                    if (infoType === 'iframe' && githubUrl && url) {
+                        updatePanelWithIframe(title, url, githubUrl);
+                    } else {
+                        // Para los demás proyectos, mostrar texto normal
+                        updatePanelWithText(title, description, url);
+                    }
+
+                    // Manejar el resaltado del hexágono activo
+                    if (currentActive === hex) return;
+                    if (currentActive) currentActive.classList.remove('active');
+                    hex.classList.add('active');
+                    currentActive = hex;
+
+                    // Opacidad para resaltar
+                    hexagons.forEach(h => {
+                        h.style.opacity = (h === hex) ? '1' : '0.85';
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
