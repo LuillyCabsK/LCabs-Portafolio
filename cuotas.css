@@ -1,0 +1,220 @@
+/* ==========================================================================
+   ===== MAQUETACIÓN GLOBAL DE LA COLUMNA (PANAL | INFO) =====
+   ========================================================================== */
+
+.honeycomb-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    margin: 4rem auto;
+    width: 100%;
+    max-width: 1050px;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+}
+
+/* Espacio cuadrado rígido para que la colmena no colapse ni pise el footer */
+.honeycomb-container {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Evita que el panel derecho lo aplaste */
+}
+
+/* Anillo de rotación periférica */
+.honeycomb-orbit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotar-orbita 40s linear infinite;
+}
+
+/* Congelar el movimiento al pasar el cursor encima para facilitar el clic */
+.honeycomb-container:hover .honeycomb-orbit,
+.honeycomb-container:hover .hex-emoji {
+    animation-play-state: paused;
+}
+
+/* ==========================================================================
+   ===== RESET Y DEFINICIÓN DEL HEXÁGONO REPARADO =====
+   ========================================================================== */
+
+.hex {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 100px !important;
+    height: 115px !important;
+    margin-top: -57.5px !important; /* Centrado vertical exacto */
+    margin-left: -50px !important;   /* Centrado horizontal exacto */
+    
+    /* Reseteo radical de estilos por defecto de botones de navegadores */
+    background-color: #ffffff !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    
+    /* Máscara geométrica simétrica de la insignia scout */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%) !important;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%) !important;
+    
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: transform 0.25s ease, filter 0.25s ease, opacity 0.3s ease;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+}
+
+/* Borde estético interno de la insignia */
+.hex::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    background: inherit;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    z-index: 1;
+}
+
+.hex-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    transition: transform 0.3s ease;
+}
+
+/* Contragiro mecánico para que los emojis no giren de cabeza */
+.hex-emoji {
+    position: relative;
+    z-index: 2;
+    font-size: 2.1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    display: inline-block;
+    animation: contragiro-emoji 40s linear infinite;
+}
+
+/* Eje central quieto */
+.hex-center {
+    position: absolute !important;
+    z-index: 15;
+    transform: translate(0, 0) scale(1) !important;
+}
+
+/* ==========================================================================
+   ===== DISTRIBUCIÓN RADIAL MATEMÁTICA (COORDINADAS DEL PANAL) =====
+   ========================================================================== */
+.hex-p1 { transform: translate(0px, -114px); }        /* Arriba */
+.hex-p2 { transform: translate(98px, -57px); }        /* Superior Derecha */
+.hex-p3 { transform: translate(98px, 57px); }         /* Inferior Derecha */
+.hex-p4 { transform: translate(0px, 114px); }         /* Abajo */
+.hex-p6 { transform: translate(-98px, 57px); }        /* Inferior Izquierda */
+.hex-p7 { transform: translate(-98px, -57px); }       /* Superior Izquierda */
+
+/* ==========================================================================
+   ===== ANIMACIONES =====
+   ========================================================================== */
+@keyframes rotar-orbita {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+@keyframes contragiro-emoji {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(-360deg); }
+}
+
+/* ==========================================================================
+   ===== INTERACCIONES, ENFOQUES Y ACTIVOS =====
+   ========================================================================== */
+.hex:hover {
+    z-index: 40;
+    filter: drop-shadow(0 6px 14px rgba(0,0,0,0.25)) !important;
+    opacity: 1 !important;
+}
+
+.hex:hover .hex-bg {
+    transform: scale(1.08);
+}
+
+/* Hovers manteniendo su posición matemática de origen */
+.hex-p1:hover { transform: translate(0px, -114px) scale(1.12) !important; }
+.hex-p2:hover { transform: translate(98px, -57px) scale(1.12) !important; }
+.hex-p3:hover { transform: translate(98px, 57px) scale(1.12) !important; }
+.hex-p4:hover { transform: translate(0px, 114px) scale(1.12) !important; }
+.hex-p6:hover { transform: translate(-98px, 57px) scale(1.12) !important; }
+.hex-p7:hover { transform: translate(-98px, -57px) scale(1.12) !important; }
+.hex-center:hover { transform: translate(0, 0) scale(1.12) !important; }
+
+/* Resaltado del elemento seleccionado */
+.hex.active {
+    background-color: var(--mostaza, #e6a017) !important;
+    filter: drop-shadow(0 0 14px var(--mostaza, #e6a017)) !important;
+    opacity: 1 !important;
+}
+
+/* Carga fluida de las imágenes de fondo mapeadas */
+.hex-img-1 .hex-bg { background-image: url('https://picsum.photos/id/104/400/400'); }
+.hex-img-2 .hex-bg { background-image: url('https://picsum.photos/id/119/400/400'); }
+.hex-img-3 .hex-bg { background-image: url('https://picsum.photos/id/96/400/400'); }
+.hex-img-4 .hex-bg { background-image: url('https://picsum.photos/id/106/400/400'); }
+.hex-img-5 .hex-bg { background-image: url('https://picsum.photos/id/20/400/400'); }
+.hex-img-6 .hex-bg { background-image: url('https://picsum.photos/id/127/400/400'); }
+.hex-img-7 .hex-bg { background-image: url('https://picsum.photos/id/43/400/400'); }
+
+/* ==========================================================================
+   ===== PANEL DE DETALLES (LADO DERECHO ESTABLE) =====
+   ========================================================================== */
+.info-panel {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--hueso, #f5f0e1);
+    border-left: 6px solid var(--mostaza, #e6a017);
+    border-radius: 16px;
+    padding: 1.8rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    box-sizing: border-box;
+}
+
+.info-panel h3 {
+    margin-top: 0;
+    color: var(--azul-rey, #1e3a8a);
+    font-size: 1.4rem;
+}
+
+.info-panel p {
+    line-height: 1.6;
+    color: #444444;
+}
+
+/* Vista responsive adaptativa para dispositivos móviles */
+@media (max-width: 820px) {
+    .honeycomb-wrapper {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .info-panel {
+        width: 100%;
+        max-width: 460px;
+    }
+}
