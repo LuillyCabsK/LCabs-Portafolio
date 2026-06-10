@@ -1,0 +1,435 @@
+/* ============================================
+   ESTILOS PARA SITIO WEB SCOUTS CAUCA
+   Colores: verde - amarillo - verde (bandera)
+   Incluye honeycomb giratorio y panel lateral
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background: linear-gradient(135deg, #f5f7f0 0%, #e2e8d5 100%);
+    color: #1a3a1a;
+}
+
+/* ===== VARIABLES DE COLOR ===== */
+:root {
+    --verde-cauca: #1b4d1b;
+    --verde-claro: #3a7d3a;
+    --amarillo-cauca: #e6b800;
+    --amarillo-dorado: #f5c518;
+    --blanco: #ffffff;
+    --gris-suave: rgba(27, 77, 27, 0.08);
+}
+
+/* ===== HEADER DOS LÍNEAS ===== */
+.scout-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 245, 0.96);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border-bottom: 2px solid var(--amarillo-cauca);
+}
+
+.header-top {
+    background: var(--verde-cauca);
+    padding: 0.7rem 1rem;
+    text-align: center;
+}
+
+.header-top a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 1.2rem;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+    font-size: 1rem;
+}
+
+.header-top a:hover {
+    color: var(--amarillo-cauca);
+    text-decoration: underline;
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    padding: 0.8rem 1rem;
+    background: rgba(255,255,250,0.9);
+}
+
+.header-bottom a {
+    text-decoration: none;
+    color: var(--verde-cauca);
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 40px;
+    transition: all 0.2s;
+}
+
+.header-bottom a:hover {
+    background-color: var(--amarillo-cauca);
+    color: var(--verde-cauca);
+    transform: translateY(-2px);
+}
+
+/* ===== HONEYCOMB GIRATORIO CON PANEL LATERAL ===== */
+.ramas-section {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: rgba(245, 247, 240, 0.6);
+    backdrop-filter: blur(2px);
+}
+
+.ramas-section h2 {
+    font-size: 2.2rem;
+    color: var(--verde-cauca);
+    letter-spacing: -0.5px;
+    border-bottom: 3px solid var(--amarillo-cauca);
+    display: inline-block;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.ramas-sub {
+    color: var(--verde-claro);
+    font-weight: 500;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Contenedor principal (flex para poner honeycomb + panel lateral) */
+.honeycomb-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+    max-width: 1100px;
+}
+
+.honeycomb-container {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Anillo giratorio */
+.honeycomb-orbit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotar-orbita 40s linear infinite;
+}
+
+.honeycomb-container:hover .honeycomb-orbit,
+.honeycomb-container:hover .hex-emoji {
+    animation-play-state: paused;
+}
+
+/* Hexágono base */
+.hex {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 100px !important;
+    height: 115px !important;
+    margin-top: -57.5px !important;
+    margin-left: -50px !important;
+    background-color: var(--verde-claro) !important;
+    border: none !important;
+    outline: none !important;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%) !important;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: transform 0.25s ease, filter 0.25s ease;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hex-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.hex-emoji {
+    position: relative;
+    z-index: 2;
+    font-size: 2rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.hex-text {
+    position: relative;
+    z-index: 2;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Posiciones radiales */
+.hex-p1 { transform: translate(0px, -114px); }
+.hex-p2 { transform: translate(98px, -57px); }
+.hex-p3 { transform: translate(98px, 57px); }
+.hex-p4 { transform: translate(0px, 114px); }
+.hex-p6 { transform: translate(-98px, 57px); }
+.hex-p7 { transform: translate(-98px, -57px); }
+
+/* Hexágono central */
+.hex-center {
+    position: absolute !important;
+    z-index: 15;
+    transform: translate(0, 0) scale(1) !important;
+    background-color: var(--amarillo-cauca) !important;
+    color: var(--verde-cauca);
+}
+.hex-center .hex-emoji {
+    font-size: 2.2rem;
+}
+.hex-center .hex-text {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Hover */
+.hex:hover {
+    transform: scale(1.08);
+    background-color: var(--amarillo-cauca) !important;
+    color: var(--verde-cauca);
+    filter: drop-shadow(0 8px 16px rgba(0,0,0,0.25));
+}
+.hex-p1:hover { transform: translate(0px, -114px) scale(1.08); }
+.hex-p2:hover { transform: translate(98px, -57px) scale(1.08); }
+.hex-p3:hover { transform: translate(98px, 57px) scale(1.08); }
+.hex-p4:hover { transform: translate(0px, 114px) scale(1.08); }
+.hex-p6:hover { transform: translate(-98px, 57px) scale(1.08); }
+.hex-p7:hover { transform: translate(-98px, -57px) scale(1.08); }
+.hex-center:hover { transform: scale(1.08) !important; }
+
+/* Animación de rotación */
+@keyframes rotar-orbita {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+/* Panel de información lateral */
+.info-panel {
+    flex: 1;
+    min-width: 260px;
+    background: rgba(255, 255, 245, 0.95);
+    backdrop-filter: blur(8px);
+    border-left: 6px solid var(--amarillo-cauca);
+    border-radius: 24px;
+    padding: 1.8rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.info-panel h3 {
+    margin-top: 0;
+    color: var(--verde-cauca);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.info-panel p {
+    line-height: 1.5;
+    color: #2c2c2c;
+}
+
+.btn-demo {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: var(--verde-claro);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+}
+
+.btn-demo:hover {
+    background-color: var(--amarillo-cauca);
+    color: var(--verde-cauca);
+    transform: translateY(-2px);
+}
+
+/* ===== EVENTOS ===== */
+.eventos {
+    background: rgba(255, 252, 235, 0.92);
+    backdrop-filter: blur(4px);
+    border-radius: 48px;
+    max-width: 1000px;
+    margin: 2.5rem auto;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border: 1px solid var(--amarillo-cauca);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.eventos h3 {
+    color: var(--verde-cauca);
+    font-size: 1.9rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.eventos h3:after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 25%;
+    width: 50%;
+    height: 3px;
+    background: var(--amarillo-cauca);
+    border-radius: 3px;
+}
+
+.eventos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.evento-card {
+    background: white;
+    padding: 1.2rem 1rem;
+    border-radius: 28px;
+    width: 210px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    border-top: 5px solid var(--amarillo-cauca);
+    transition: 0.2s;
+}
+
+.evento-card:hover {
+    transform: translateY(-5px);
+    border-top-color: var(--verde-cauca);
+}
+
+.evento-card h4 {
+    color: var(--verde-cauca);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ===== FOOTER ===== */
+.footer-scout {
+    background: var(--verde-cauca);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    border-top: 4px solid var(--amarillo-cauca);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.8rem;
+    transition: all 0.2s;
+    background: rgba(255,255,240,0.15);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    background: var(--amarillo-cauca);
+    color: var(--verde-cauca);
+}
+
+.copyright {
+    font-size: 0.8rem;
+    opacity: 0.85;
+    margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 820px) {
+    .honeycomb-wrapper {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .info-panel {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 700px) {
+    .honeycomb-container {
+        width: 280px;
+        height: 280px;
+    }
+    .hex {
+        width: 70px !important;
+        height: 80px !important;
+        margin-top: -40px !important;
+        margin-left: -35px !important;
+    }
+    .hex-p1 { transform: translate(0px, -80px); }
+    .hex-p2 { transform: translate(69px, -40px); }
+    .hex-p3 { transform: translate(69px, 40px); }
+    .hex-p4 { transform: translate(0px, 80px); }
+    .hex-p6 { transform: translate(-69px, 40px); }
+    .hex-p7 { transform: translate(-69px, -40px); }
+    .hex-emoji { font-size: 1.4rem; }
+    .hex-text { font-size: 0.6rem; }
+    .header-top a {
+        margin: 0 0.6rem;
+        font-size: 0.85rem;
+    }
+    .header-bottom {
+        gap: 0.6rem;
+    }
+    .evento-card {
+        width: 170px;
+    }
+}

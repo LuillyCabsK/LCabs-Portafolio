@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Scouts Cauca | Movimiento Scout en el Cauca</title>
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="styleCauca.css">
+    <!-- Fontawesome para íconos redes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header class="scout-header">
+    <div class="header-top">
+        <a href="#">🏕️ Únete a los scouts</a>
+        <a href="#">📅 Eventos</a>
+    </div>
+    <div class="header-bottom">
+        <a href="#">📖 Sobre nosotros</a>
+        <a href="#">👥 Grupos scout</a>
+        <a href="#">🌱 Programa de jóvenes</a>
+        <a href="#">📚 Biblioteca</a>
+    </div>
+</header>
+
+<main>
+    <!-- SECCIÓN RAMAS / UNIDADES CON HONEYCOMB GIRATORIO -->
+    <section class="ramas-section">
+        <h2>🗺️ Nuestras ramas</h2>
+        <p class="ramas-sub">Pasa el mouse sobre el panal para pausar · Haz clic en cada hexágono para conocer más</p>
+
+        <div class="honeycomb-wrapper">
+            <div class="honeycomb-container">
+                <!-- Anillo giratorio (6 hexágonos exteriores) -->
+                <div class="honeycomb-orbit">
+                    <!-- Cachorros -->
+                    <button class="hex hex-p1" data-rama="cachorros" data-titulo="Cachorros" data-desc="Edad: 5-7 años. Desarrollo de confianza, juego y exploración. Primer contacto con el escultismo.">
+                        <div class="hex-bg"></div>
+                        <span class="hex-emoji">🐣</span>
+                        <span class="hex-text">Cachorros<br>5-7 años</span>
+                    </button>
+                    <!-- Manada -->
+                    <button class="hex hex-p2" data-rama="manada" data-titulo="Manada" data-desc="Edad: 7-11 años. Aprendizaje mediante la leyenda de Mowgli, vida al aire libre, trabajo en equipo.">
+                        <div class="hex-bg"></div>
+                        <span class="hex-emoji">🐺</span>
+                        <span class="hex-text">Manada<br>7-11 años</span>
+                    </button>
+                    <!-- Tropa -->
+                    <button class="hex hex-p3" data-rama="tropa" data-titulo="Tropa" data-desc="Edad: 11-15 años. Desarrollo de autonomía, especialidades, campamentos y servicios comunitarios.">
+                        <div class="hex-bg"></div>
+                        <span class="hex-emoji">🏹</span>
+                        <span class="hex-text">Tropa<br>11-15 años</span>
+                    </button>
+                    <!-- Nómadas Scout -->
+                    <button class="hex hex-p4" data-rama="nomadas" data-titulo="Nómadas Scout" data-desc="Edad: 15-18 años. Aventura, liderazgo, proyectos de impacto social y exploración.">
+                        <div class="hex-bg"></div>
+                        <span class="hex-emoji">⛰️</span>
+                        <span class="hex-text">Nómadas Scout<br>15-18 años</span>
+                    </button>
+                    <!-- Rover -->
+                    <button class="hex hex-p6" data-rama="rover" data-titulo="Rover" data-desc="Edad: 18-21 años. Servicio, desarrollo personal, proyectos internacionales, formación de líderes.">
+                        <div class="hex-bg"></div>
+                        <span class="hex-emoji">🚀</span>
+                        <span class="hex-text">Rover<br>18-21 años</span>
+                    </button>
+                    <!-- Dirigente -->
+                    <button class="hex hex-p7" data-rama="dirigente" data-titulo="Dirigente" data-desc="Adultos voluntarios que guían, forman y acompañan a los jóvenes. Capacitación y compromiso.">
+                        <div class="hex-bg"></div>
+                        <span class="hex-emoji">🧭</span>
+                        <span class="hex-text">Dirigente<br>Adultos</span>
+                    </button>
+                </div>
+
+                <!-- Hexágono central (estático) -->
+                <div class="hex hex-center" data-rama="central" data-titulo="Scouts Cauca" data-desc="Somos parte del Movimiento Scout en el Cauca, promoviendo valores, liderazgo y servicio desde 1920.">
+                    <span class="hex-emoji">🌿</span>
+                    <span class="hex-text">Scouts<br>Cauca</span>
+                </div>
+            </div>
+
+            <!-- Panel de información lateral (similar al portafolio) -->
+            <div class="info-panel" id="info-panel">
+                <h3 id="info-title">✨ Scouts Cauca</h3>
+                <p id="info-desc">Haz clic en una rama para conocer más sobre cada unidad educativa.</p>
+                <a href="#" id="info-link" class="btn-demo" style="display: none;">Más información →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRÓXIMOS EVENTOS -->
+    <div class="eventos">
+        <h3>📢 Próximos eventos</h3>
+        <div class="eventos-grid">
+            <div class="evento-card">
+                <h4>🌸 Semana Santa</h4>
+                <p>13-20 abril · Retiro espiritual</p>
+            </div>
+            <div class="evento-card">
+                <h4>🏕️ RIO</h4>
+                <p>Reunión Interregional de Oficiales</p>
+            </div>
+            <div class="evento-card">
+                <h4>🔥 Campamento regional</h4>
+                <p>Junio 2026 · Sierra Caucana</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer-scout">
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="copyright">
+        <p>© 2026 Scouts Cauca — Construyendo un mejor futuro</p>
+        <p style="font-size:0.7rem; opacity:0.7;">Sitio en desarrollo · Desarrollado por Luilly Cabs para la comunidad scout del Cauca</p>
+    </div>
+</footer>
+
+<!-- JavaScript externo -->
+<script src="scouts-cauca.js"></script>
+</body>
+</html>
