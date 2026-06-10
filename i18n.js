@@ -1,4 +1,5 @@
 // i18n.js - Traducciones completas + edad dinámica + modal de idioma + botón reset
+// Actualizado para incluir el proyecto ruN4UlifE
 
 const translations = {
     es: {
@@ -67,7 +68,7 @@ const translations = {
         "formacion.powerbi.fecha": "Certificación",
         "formacion.powerbi.descripcion": "Transformación de datos, modelado, creación de dashboards interactivos, DAX básico, e integración con Excel y bases de datos.",
 
-        // ===== EXPERIENCIA (NUEVO) =====
+        // ===== EXPERIENCIA =====
         "experiencia.title": "Sergio Luilly Cabrera Dorado - Experiencia",
         "experiencia.titulo_principal": "Experiencia Profesional",
         "experiencia.familysearch.titulo": "Data Analyst - Registros Genealógicos",
@@ -121,7 +122,10 @@ const translations = {
         "proyecto.proximo_titulo": "🚀 Próximo Proyecto",
         "proyecto.proximo_info": "Espacio reservado para una nueva aplicación.",
         "proyecto.notas_titulo": "📊 Calculadora de Notas",
-        "proyecto.notas_info": "Calcula tu nota necesaria para aprobar. React y lógica personalizada."
+        "proyecto.notas_info": "Calcula tu nota necesaria para aprobar. React y lógica personalizada.",
+        // NUEVO: ruN4UlifE (juego Python)
+        "proyecto.rn4u_titulo": "🐍 ruN4UlifE: Aventura en Python",
+        "proyecto.rn4u_info": "Aventura textual de supervivencia en la montaña. Juego por turnos con decisiones, inventario y consecuencias. (Versión Python)"
     },
 
     en: {
@@ -244,7 +248,10 @@ const translations = {
         "proyecto.proximo_titulo": "🚀 Next Project",
         "proyecto.proximo_info": "Space reserved for a new amazing application.",
         "proyecto.notas_titulo": "📊 Grade Calculator",
-        "proyecto.notas_info": "Calculate the grade you need to pass. React and custom logic."
+        "proyecto.notas_info": "Calculate the grade you need to pass. React and custom logic.",
+        // NUEVO: ruN4UlifE English
+        "proyecto.rn4u_titulo": "🐍 ruN4UlifE: Python Adventure",
+        "proyecto.rn4u_info": "Text-based mountain survival adventure. Turn-based game with choices, inventory, and consequences. (Python version)"
     }
 };
 
@@ -295,7 +302,7 @@ function setLanguage(lang) {
         if (infoKey && translations[lang][infoKey]) hex.setAttribute('data-info', translations[lang][infoKey]);
     });
 
-    // Actualizar la edad después de traducir (por si el span fue reemplazado)
+    // Actualizar la edad después de traducir
     actualizarEdad();
 }
 
@@ -374,18 +381,16 @@ function showLanguageModal() {
     document.body.appendChild(modal);
 }
 
-// ===== INICIALIZACIÓN CUANDO EL DOM ESTÁ LISTO =====
+// ===== INICIALIZACIÓN =====
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferredLanguage');
     if (!savedLang) {
         showLanguageModal();
     } else {
         setLanguage(savedLang);
-        // Doble garantía: actualizar edad también aquí
         actualizarEdad();
     }
 
-    // Botón para restablecer idioma (si existe en el footer)
     const resetBtn = document.getElementById('reset-lang');
     if (resetBtn) {
         resetBtn.addEventListener('click', (e) => {
