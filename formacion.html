@@ -3,97 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luilly Cabs - Formación Académica</title>
+    <title data-i18n="formacion.title">Luilly Cabs - Formación Académica</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/0ab2b19b31.js" crossorigin="anonymous"></script>
-    <!-- No cargues age.js aquí porque no hay span con id="age" -->
+    <script src="i18n.js" defer></script>
 </head>
 <body>
     <header>
         <div class="head_bar">
-            <div class="barLeft">
-                <p class="nombre-header">🍴 Luilly Cabs | Full Stack & Data</p>
-                <p class="tagline-header">Front-End Developer · Data Analyst · Scout · Cocinero</p>
-            </div>
+            <p class="barLeft" data-i18n="header.nombre">🍴 Luilly Cabs | Full Stack & Data</p>
             <div class="barRight">
-                <a href="index.html">Home</a>
-                <a href="skills.html">Skills</a>
-                <a href="hobbies.html">Hobbies</a>
-                <a href="formacion.html">Formación</a>
-                <a href="proyectos.html">Proyectos</a>
-                <p>luilly.cabrera@gmail.com</p>
+                <a href="index.html" data-i18n="nav.home">Home</a>
+                <a href="skills.html" data-i18n="nav.skills">Skills</a>
+                <a href="hobbies.html" data-i18n="nav.hobbies">Hobbies</a>
+                <a href="formacion.html" data-i18n="nav.formacion">Formación</a>
+                <a href="proyectos.html" data-i18n="nav.proyectos">Proyectos</a>
+                <a href="experiencia.html" data-i18n="nav.experiencia">Experiencia</a>
+                <p>luillycbs@gmail.com</p>
             </div>
         </div>
     </header>
 
     <main>
         <section class="experiencia-profesional">
-            <h1 class="tituloSeccion"><i class="fa-solid fa-graduation-cap"></i> Formación Académica Profesional</h1>
+            <h1 class="tituloSeccion" data-i18n="formacion.titulo_principal"><i class="fa-solid fa-graduation-cap"></i> Formación Académica Profesional</h1>
             <div class="grid-formacion">
                 <!-- BYU Pathway -->
                 <div class="card-formacion">
                     <div class="card-header">
                         <i class="fa-solid fa-laptop-code"></i>
-                        <h3>Software Development</h3>
+                        <h3 data-i18n="formacion.byu.titulo">Software Development</h3>
                     </div>
-                    <p class="institucion">BYU Pathway Worldwide</p>
-                    <p class="fecha">2024 - Presente</p>
-                    <p class="descripcion">Desarrollo de software full stack, estructuras de datos, bases de datos SQL, programación orientada a objetos, y fundamentos de ingeniería de software. Proyectos prácticos en equipo y metodologías ágiles.</p>
+                    <p class="institucion" data-i18n="formacion.byu.institucion">BYU Pathway Worldwide</p>
+                    <p class="fecha" data-i18n="formacion.byu.fecha">2024 - Presente</p>
+                    <p class="descripcion" data-i18n="formacion.byu.descripcion">Desarrollo de software full stack, estructuras de datos, bases de datos SQL, programación orientada a objetos, y fundamentos de ingeniería de software. Proyectos prácticos en equipo y metodologías ágiles.</p>
                 </div>
 
                 <!-- Alura Latam -->
                 <div class="card-formacion">
                     <div class="card-header">
                         <i class="fa-brands fa-react"></i>
-                        <h3>Front-End Development Certificate</h3>
+                        <h3 data-i18n="formacion.alura.titulo">Front-End Development Certificate</h3>
                     </div>
-                    <p class="institucion">Alura Latam</p>
-                    <p class="fecha">2024 - 2025</p>
-                    <p class="descripcion">HTML5, CSS3, JavaScript (ES6+), React, diseño responsivo, Flexbox, Grid, consumo de APIs REST, y buenas prácticas de accesibilidad y rendimiento.</p>
+                    <p class="institucion" data-i18n="formacion.alura.institucion">Alura Latam</p>
+                    <p class="fecha" data-i18n="formacion.alura.fecha">2024 - 2025</p>
+                    <p class="descripcion" data-i18n="formacion.alura.descripcion">HTML5, CSS3, JavaScript (ES6+), React, diseño responsivo, Flexbox, Grid, consumo de APIs REST, y buenas prácticas de accesibilidad y rendimiento.</p>
                 </div>
 
                 <!-- Ingeniería Agroindustrial -->
                 <div class="card-formacion">
                     <div class="card-header">
                         <i class="fa-solid fa-flask"></i>
-                        <h3>Ingeniería Agroindustrial</h3>
+                        <h3 data-i18n="formacion.agro.titulo">Ingeniería Agroindustrial</h3>
                     </div>
-                    <p class="institucion">Universidad del Cauca, Popayán</p>
-                    <p class="fecha">8° semestre (en curso)</p>
-                    <p class="descripcion">Formulación y evaluación de proyectos, gestión de calidad, procesamiento de alimentos, conservación y empaque, ingeniería económica, investigación operativa.</p>
+                    <p class="institucion" data-i18n="formacion.agro.institucion">Universidad del Cauca, Popayán</p>
+                    <p class="fecha" data-i18n="formacion.agro.fecha">8° semestre (en curso)</p>
+                    <p class="descripcion" data-i18n="formacion.agro.descripcion">Formulación y evaluación de proyectos, gestión de calidad, procesamiento de alimentos, conservación y empaque, ingeniería económica, investigación operativa.</p>
                 </div>
             </div>
 
-            <h1 class="tituloSeccion"><i class="fa-solid fa-graduation-cap"></i> Cursos</h1>
+            <h1 class="tituloSeccion" data-i18n="formacion.cursos_titulo"><i class="fa-solid fa-graduation-cap"></i> Cursos</h1>
             <div class="grid-formacion">
-                <!-- SENA - Resolución de problemas con Python -->
+                <!-- Python -->
                 <div class="card-formacion">
                     <div class="card-header">
                         <i class="fa-brands fa-python"></i>
-                        <h3>Análisis exploratorio con PYTHON</h3>
+                        <h3 data-i18n="formacion.python.titulo">Análisis exploratorio con PYTHON</h3>
                     </div>
-                    <p class="institucion">SENA</p>
-                    <p class="fecha">Certificación</p>
-                    <p class="descripcion">Lógica de programación, estructuras de control, funciones, manejo de archivos, y resolución de problemas algorítmicos con Python.</p>
+                    <p class="institucion" data-i18n="formacion.python.institucion">SENA</p>
+                    <p class="fecha" data-i18n="formacion.python.fecha">Certificación</p>
+                    <p class="descripcion" data-i18n="formacion.python.descripcion">Lógica de programación, estructuras de control, funciones, manejo de archivos, y resolución de problemas algorítmicos con Python.</p>
                 </div>
 
-                <!-- SENA - Análisis de datos con Power BI -->
+                <!-- Power BI -->
                 <div class="card-formacion">
                     <div class="card-header">
                         <i class="fa-solid fa-chart-line"></i>
-                        <h3>Visualización de datos usando POWER BI</h3>
+                        <h3 data-i18n="formacion.powerbi.titulo">Visualización de datos usando POWER BI</h3>
                     </div>
-                    <p class="institucion">SENA</p>
-                    <p class="fecha">Certificación</p>
-                    <p class="descripcion">Transformación de datos, modelado, creación de dashboards interactivos, DAX básico, e integración con Excel y bases de datos.</p>
+                    <p class="institucion" data-i18n="formacion.powerbi.institucion">SENA</p>
+                    <p class="fecha" data-i18n="formacion.powerbi.fecha">Certificación</p>
+                    <p class="descripcion" data-i18n="formacion.powerbi.descripcion">Transformación de datos, modelado, creación de dashboards interactivos, DAX básico, e integración con Excel y bases de datos.</p>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <p>Este portafolio lo construí paso a paso, aprendiendo cada línea. Recibí mentoría y orientación de ‘La Ballena’ 🐋, un desarrollador con años de experiencia que me guió en la arquitectura, buenas prácticas y debugging. Todo el código fue escrito por mí, entendiendo cada decisión.</p>
+        <p data-i18n="footer.text">Este portafolio lo construí paso a paso, aprendiendo cada línea. Recibí mentoría y orientación de ‘La Ballena’ 🐋, un desarrollador con años de experiencia que me guió en la arquitectura, buenas prácticas y debugging. Todo el código fue escrito por mí, entendiendo cada decisión.</p>
         <i class="fa-solid fa-dragon"></i>
+        <p><a href="#" id="reset-lang" style="color: var(--mostaza); text-decoration: underline; cursor: pointer;">🌐 Cambiar idioma / Change language</a></p>
     </footer>
 </body>
 </html>
