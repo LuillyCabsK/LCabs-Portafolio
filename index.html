@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sergio Luilly Cabrera Dorado - Portafolio comercial</title>
+    <title data-i18n="index.title">Sergio Luilly Cabrera Dorado - Portafolio comercial</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/0ab2b19b31.js" crossorigin="anonymous"></script>
-    <script src="age.js"></script>
-    
+    <!-- <script src="age.js"></script> -->
+    <script src="i18n.js" defer></script>
 </head>
 <body>
     <header>
         <div class="head_bar">
-            <p class="barLeft">LuillyCabs - Portafolio Comercial</p>
+            <p class="barLeft" data-i18n="header.nombre">🍴 Luilly Cabs | Full Stack & Data</p>
             <div class="barRight">
-                <a href="index.html">Home</a>
-                <a href="skills.html">Skills</a>
-                <a href="hobbies.html">Hobbies</a>
-                <a href="formacion.html">Formación</a>
-                <a href="proyectos.html">Proyectos</a>
-                <a href="experiencia.html">Experiencia</a>
-                <p class="barRight">luillycbs@gmail.com</p>
+                <a href="index.html" data-i18n="nav.home">Home</a>
+                <a href="skills.html" data-i18n="nav.skills">Skills</a>
+                <a href="hobbies.html" data-i18n="nav.hobbies">Hobbies</a>
+                <a href="formacion.html" data-i18n="nav.formacion">Formación</a>
+                <a href="proyectos.html" data-i18n="nav.proyectos">Proyectos</a>
+                <a href="experiencia.html" data-i18n="nav.experiencia">Experiencia</a>
+                <p>luillycbs@gmail.com</p>
             </div>
         </div>
     </header>
@@ -28,59 +28,54 @@
     <main>
         <section class="presentacion">
             <div class="presentacion_texto">
-                <h1>Sergio Luilly Cabrera Dorado</h1>
-                <p>Soy un hombre colombiano de <span id="age"></span> años, miembro de la hermandad scout desde los 11 años. Experto en formulación de proyectos, apicultura y dirección de equipos. Conocimientos en programación, agroindustrias, preparación y conservación de alimentos.</p>
+                <h1 data-i18n="index.titulo">Sergio Luilly Cabrera Dorado</h1>
+                <p data-i18n="index.presentacion">Soy un hombre, colombiano de <span id="age"></span> años, miembro de la hermandad scout desde los 11 años. Experto en formulación de proyectos, apicultura y dirección de equipos. Conocimientos en programación, agroindustrias, preparación y conservación de alimentos.</p>
                 <section class="presentacion_enlaces">
-                        <a href="https://github.com/LuillyCabsK/LCabs-Portafolio" target="_blank">GitHub</a>
-                        <i class="fa-solid fa-arrow-trend-up"></i>
-                        <a href="https://www.instagram.com/mr.l_cabs/" target="_blank">Instagram</a>
-                        <i class="fa-solid fa-arrow-trend-up"></i>
-                        <a href="https://www.linkedin.com/in/luilly-cabrera/" target="_blank">LinkedIn</a>
-                        <i class="fa-solid fa-arrow-trend-up"></i>
+                    <a href="https://github.com/LuillyCabsK/LCabs-Portafolio" target="_blank">GitHub</a>
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    <a href="https://www.instagram.com/mr.l_cabs/" target="_blank">Instagram</a>
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    <a href="https://www.linkedin.com/in/luilly-cabrera/" target="_blank">LinkedIn</a>
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                </section>
             </div>
             <div class="presentacion__imagen">
-                <img src="assets/Imagen de WhatsApp 2025-07-10 a las 10.52.53_b810a56a.jpg" id="image" src="" alt="Imagen de perfil">
+                <img src="assets/Imagen de WhatsApp 2025-07-10 a las 10.52.53_b810a56a.jpg" alt="Imagen de perfil">
             </div>
-            </section>
-        <section class=" biografia">
-            <h1 class="biografiaTitulo">Mi Biografia</h1>
-             <p class="biografiaTexto">
-                Luilly Cabrera es un profesional con una amplia experiencia en el desarrollo de software, especialmente en el área de front-end con un enfoque en inteligencia artificial. Ha cursado 8 semestres de ingeniería agroindustrial y ha participado en seminarios de emprendimiento, lo que le ha permitido expandir sus conocimientos en áreas como Excel, Word y electricidad básica.
-                Además, Luilly tiene un amplio dominio en diversas disciplinas culinarias, con especialización en cocina colombiana, mediterránea, italiana, argentina, parrilla y comidas rápidas, así como en la preparación de bebidas espirituosas. Es un apasionado del mundo scout, donde ha recibido formación en insignia de madera especializada en tropa. 
-                Con una filosofía que combina la tecnología, la creatividad en la cocina y el compromiso social, Luilly Cabrera continúa desarrollándose profesionalmente mientras comparte sus pasiones con los demás.
-             </p>
+        </section>
+
+        <section class="biografia">
+            <h1 class="biografiaTitulo" data-i18n="index.biografia_titulo">Mi Biografia</h1>
+            <p class="biografiaTexto" data-i18n="index.biografia_texto">Luilly Cabrera es un profesional con una amplia experiencia en el desarrollo de software, especialmente en el área de front-end con un enfoque en inteligencia artificial. Ha cursado 8 semestres de ingeniería agroindustrial y ha participado en seminarios de emprendimiento, lo que le ha permitido expandir sus conocimientos en áreas como Excel, Word y electricidad básica. Además, Luilly tiene un amplio dominio en diversas disciplinas culinarias, con especialización en cocina colombiana, mediterránea, italiana, argentina, parrilla y comidas rápidas, así como en la preparación de bebidas espirituosas. Es un apasionado del mundo scout, donde ha recibido formación en insignia de madera especializada en tropa. Con una filosofía que combina la tecnología, la creatividad en la cocina y el compromiso social, Luilly Cabrera continúa desarrollándose profesionalmente mientras comparte sus pasiones con los demás.</p>
             <div class="biografiaSignature">
-                <img src="assets/signautre.jpg" id="image" alt="Firma Lcabs">
+                <img src="assets/signautre.jpg" alt="Firma Lcabs">
             </div>
         </section>
 
         <section class="skills">
-            <h2 class="tituloSkills">Skills</h2>
-            <!-- Contenido de habilidades -->
-                <div class="iconosSkills">
-                        <i class="fa-brands fa-html5">Html5</i>
-                        <i class="fa-brands fa-github">GitHub</i>
-                        <i class="fa-solid fa-database">Power BI</i>
-                        <i class="fa-solid fa-cubes">SQL</i>
-                        <a href="skills.html" class="resumen-link">Ver más →</a>
-                </div>
+            <h2 class="tituloSkills" data-i18n="index.skills_title">Skills</h2>
+            <div class="iconosSkills">
+                <i class="fa-brands fa-html5">Html5</i>
+                <i class="fa-brands fa-github">GitHub</i>
+                <i class="fa-solid fa-database">Power BI</i>
+                <i class="fa-solid fa-cubes">SQL</i>
+                <a href="skills.html" class="resumen-link" data-i18n="index.ver_mas">Ver más →</a>
+            </div>
         </section>
 
         <section class="hobbies">
-            <h2 class="tituloHobbies">Hobbies</h2>
-            <!-- Contenido de hobbies -->
+            <h2 class="tituloHobbies" data-i18n="index.hobbies_title">Hobbies</h2>
             <div class="iconosHobbies">
-                <i class="fa-solid fa-motorcycle">Rodar en motocicleta</i>
-                <i class="fa-solid fa-dragon">Leer novelas fantasticas</i>
-                <i class="fa-regular fa-tent">Escultismo</i>
-                <i class="fa-solid fa-fish-fins">Pesca</i>
+                <i class="fa-solid fa-motorcycle" data-i18n="hobby.moto">Rodar en motocicleta</i>
+                <i class="fa-solid fa-dragon" data-i18n="hobby.leer">Leer novelas fantasticas</i>
+                <i class="fa-regular fa-tent" data-i18n="hobby.scout">Escultismo</i>
+                <i class="fa-solid fa-fish-fins" data-i18n="hobby.pesca">Pesca</i>
             </div>
         </section>
 
         <section class="experiencia">
-            <h2 class="tituloExperiencia">Experiencia</h2>
-            <!-- Contenido de experiencia -->
-             <div class="iconosExperiencia">
+            <h2 class="tituloExperiencia" data-i18n="index.experiencia_title">Experiencia</h2>
+            <div class="iconosExperiencia">
                 <i class="fa-solid fa-pizza-slice"> Pizzaiolo: 1 año </i>
                 <i class="fa-solid fa-ankh">Misionero de tiempo completo: 2 años</i>
                 <i class="fa-solid fa-wheat-awn">Cocina Mediterranea: 2 años</i>
@@ -90,28 +85,29 @@
         </section>
 
         <section class="academics">
-            <h4 class="evenflowAcademics">Formacion academica</h4>
-         <div class="allAcademics">  
+            <h4 class="evenflowAcademics" data-i18n="index.academics_title">Formacion academica</h4>
+            <div class="allAcademics">
                 <div class="colombiaAcademics">
-                    <img src="https://www.sigma10.com.co/wp-content/uploads/2022/10/1.png" class="colombiaAcademicsSena"  alt="Firmaa Lcabs">
-                    <p class="colombiaAcademicsText">Cocina Colombiana</p>
+                    <img src="https://www.sigma10.com.co/wp-content/uploads/2022/10/1.png" class="colombiaAcademicsSena" alt="Sena">
+                    <p class="colombiaAcademicsText" data-i18n="academic.cocina">Cocina Colombiana</p>
                 </div>
                 <div class="colombiaAcademics">
-                    <img src="https://www.sigma10.com.co/wp-content/uploads/2022/10/1.png" class="colombiaAcademicsSena" alt="sena">
-                    <p class="colombiaAcademicsText">Analisis de Bases de datos</p>
+                    <img src="https://www.sigma10.com.co/wp-content/uploads/2022/10/1.png" class="colombiaAcademicsSena" alt="Sena">
+                    <p class="colombiaAcademicsText" data-i18n="academic.bd">Analisis de Bases de datos</p>
                 </div>
                 <div class="colombiaAcademics">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwOtUfOtx62ltWW4tN7BFRsKwBos9zrzFaag&s" class="colombiaAcademicsSena" alt="Alure Latam">
-                    <p class="colombiaAcademicsText">Formacion front-end</p>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwOtUfOtx62ltWW4tN7BFRsKwBos9zrzFaag&s" class="colombiaAcademicsSena" alt="Alura Latam">
+                    <p class="colombiaAcademicsText" data-i18n="academic.frontend">Formacion front-end</p>
                 </div>
-            </div>         
+            </div>
         </section>
     </main>
 
-
-</body>
-<footer class="footer">
-        <p>Este portafolio lo construí paso a paso, aprendiendo cada línea. Recibí mentoría y orientación de ‘La Ballena’ 🐋, un desarrollador con años de experiencia que me guió en la arquitectura, buenas prácticas y debugging. Todo el código fue escrito por mí, entendiendo cada decisión.</p>
+    <footer class="footer">
+        <p data-i18n="footer.text">Este portafolio lo construí paso a paso, aprendiendo cada línea. Recibí mentoría y orientación de ‘La Ballena’ 🐋, un desarrollador con años de experiencia que me guió en la arquitectura, buenas prácticas y debugging. Todo el código fue escrito por mí, entendiendo cada decisión.</p>
+        <p><a href="#" id="reset-lang" style="color: var(--mostaza); text-decoration: underline; cursor: pointer;">🌐 Cambiar idioma / Change language</a></p>
         <i class="fa-solid fa-dragon"></i>
+        
     </footer>
+</body>
 </html>

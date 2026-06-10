@@ -3,35 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sergio Luilly Cabrera Dorado - Portafolio comercial</title>
+    <title data-i18n="hobbies.title">Luilly Cabs - Hobbies</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/0ab2b19b31.js" crossorigin="anonymous"></script>
-    <script src="age.js"></script>
-    
+    <script src="i18n.js" defer></script>
 </head>
 <body>
-<header>
-    <div class="head_bar">
-        <div class="barLeft">
-            <p class="nombre-header">🍴 Luilly Cabs | Full Stack & Data</p>
-            <p class="tagline-header">Front-End Developer · Data Analyst · Scout · Cocinero</p>
+    <header>
+        <div class="head_bar">
+            <p class="barLeft" data-i18n="header.nombre">🍴 Luilly Cabs | Full Stack & Data</p>
+            <div class="barRight">
+                <a href="index.html" data-i18n="nav.home">Home</a>
+                <a href="skills.html" data-i18n="nav.skills">Skills</a>
+                <a href="hobbies.html" data-i18n="nav.hobbies">Hobbies</a>
+                <a href="formacion.html" data-i18n="nav.formacion">Formación</a>
+                <a href="proyectos.html" data-i18n="nav.proyectos">Proyectos</a>
+                <a href="experiencia.html" data-i18n="nav.experiencia">Experiencia</a>
+                <p>luillycbs@gmail.com</p>
+            </div>
         </div>
-        <div class="barRight">
-            <a href="index.html">Home</a>
-            <a href="skills.html">Skills</a>
-            <a href="hobbies.html">Hobbies</a>
-            <a href="formacion.html">Formación</a>
-            <a href="proyectos.html">Proyectos</a>
-            <p>luillycbs@gmail.com</p>
-        </div>
-    </div>
-</header>
+    </header>
 
+    <main>
+        <section class="hobbies">
+            <h2 class="tituloHobbies" data-i18n="hobbies.titulo">Mis Hobbies</h2>
+            <div class="iconosHobbies">
+                <i class="fa-solid fa-motorcycle" data-i18n="hobby.moto">Rodar en motocicleta</i>
+                <i class="fa-solid fa-dragon" data-i18n="hobby.leer">Leer novelas fantásticas</i>
+                <i class="fa-regular fa-tent" data-i18n="hobby.scout">Escultismo</i>
+                <i class="fa-solid fa-fish-fins" data-i18n="hobby.pesca">Pesca</i>
+            </div>
+            <p class="hobbies-desc" data-i18n="hobbies.desc">Disfruto el aire libre, la lectura y el aprendizaje constante.</p>
+        </section>
+    </main>
 
+    <footer class="footer">
+        <p data-i18n="footer.text">Este portafolio lo construí paso a paso, aprendiendo cada línea. Recibí mentoría y orientación de ‘La Ballena’ 🐋, un desarrollador con años de experiencia que me guió en la arquitectura, buenas prácticas y debugging. Todo el código fue escrito por mí, entendiendo cada decisión.</p>
+        <p><a href="#" id="reset-lang" style="color: var(--mostaza); text-decoration: underline; cursor: pointer;">🌐 Cambiar idioma / Change language</a></p>
+        <i class="fa-solid fa-dragon"></i>
+        
+    </footer>
 </body>
-<footer class="footer">
-    <p>Este portafolio lo construí paso a paso, aprendiendo cada línea. Recibí mentoría y orientación de ‘La Ballena’ 🐋, un desarrollador con años de experiencia que me guió en la arquitectura, buenas prácticas y debugging. Todo el código fue escrito por mí, entendiendo cada decisión.</p>
-    <i class="fa-solid fa-dragon"></i>
-</footer>
-</html>
 </html>

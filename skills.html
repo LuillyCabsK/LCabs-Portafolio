@@ -3,110 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="skills.title">Luilly Cabs - Skills</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/0ab2b19b31.js" crossorigin="anonymous"></script>
-    <title>Luilly Cabs - Skills</title>
+    <script src="i18n.js" defer></script>
 </head>
 <body>
-<header>
-    <div class="head_bar">
-        <div class="barLeft">
-            <p class="nombre-header">🍴 Luilly Cabs | Full Stack & Data</p>
-            <p class="tagline-header">Front-End Developer · Data Analyst · Scout · Cocinero</p>
+    <header>
+        <div class="head_bar">
+            <p class="barLeft" data-i18n="header.nombre">🍴 Luilly Cabs | Full Stack & Data</p>
+            <div class="barRight">
+                <a href="index.html" data-i18n="nav.home">Home</a>
+                <a href="skills.html" data-i18n="nav.skills">Skills</a>
+                <a href="hobbies.html" data-i18n="nav.hobbies">Hobbies</a>
+                <a href="formacion.html" data-i18n="nav.formacion">Formación</a>
+                <a href="proyectos.html" data-i18n="nav.proyectos">Proyectos</a>
+                <a href="experiencia.html" data-i18n="nav.experiencia">Experiencia</a>
+                <p>luillycbs@gmail.com</p>
+            </div>
         </div>
-        <div class="barRight">
-            <a href="index.html">Home</a>
-            <a href="skills.html">Skills</a>
-            <a href="hobbies.html">Hobbies</a>
-            <a href="formacion.html">Formación</a>
-            <a href="proyectos.html">Proyectos</a>
-            <p>luillycbs@gmail.com</p>
-        </div>
-    </div>
-</header>
-        </section>
+    </header>
 
     <main>
         <section class="skills">
-            <h2 class="tituloSkills">💻 Technical Skills</h2>
-            <!-- Contenido de habilidades tecnicas -->
-                <div class="technicalSkills">
-                        <i class="fa-brands fa-html5">Html5</i>
-                        <i class="fa-brands fa-css">Css</i>
-                        <i class="fa-brands fa-js">JS (ES6+)</i>
-                        <i class="fa-brands fa-python">Python</i> 
-                        <i class="fa-solid fa-database">SQL</i>
-                        <i class="fa-solid fa-cubes">React</i>
-                        <i class="fa-solid fa-cubes">Git</i>
-                        <i class="fa-solid fa-cubes">GitHub</i>
-                        <i class="fa-solid fa-cubes">Power BI</i>
-                        <i class="fa-solid fa-diagram-project"> Agile Methodologies</i>
-                        <i class="fa-solid fa-check-double"> Data Verification</i>
-                        <i class="fa-solid fa-folder-tree"> Document Management</i>
-
-                </div>
-
-            <h2 class="tituloSkills"> 👔 Professional Skills</h2>
-            <!-- Contenido de habilidades profesionales -->
-                <div class="professionalSkills">
-                        <i class="fa-solid fa-people-arrows"> Leadership</i>
-                        <i class="fa-solid fa-calendar-check"> Event Coordination</i>
-                        <i class="fa-solid fa-headset"> Customer Service</i>
-                        <i class="fa-solid fa-users"> Team Management</i>
-                        <i class="fa-solid fa-brain"> Problem Solving</i>
-                        <i class="fa-solid fa-hand-peace"> Adaptability</i>
-                        <i class="fa-solid fa-clock"> Work Under Pressure</i>
-                        <i class="fa-solid fa-magnifying-glass"> Attention to Detail</i>
-                        <i class="fa-solid fa-comments"> Communication</i>
-                        <i class="fa-solid fa-handshake"> Conflict Resolution</i>
-                        <i class="fa-solid fa-hourglass-half"> Time Management</i>
-                        <i class="fa-solid fa-bullseye"> Results-Oriented</i>
-                </div>
-
-            <h2 class="tituloSkills">🧠 Soft Skills</h2>
-            <div class="softSkills">
-                        <i class="fa-regular fa-lightbulb"> Pensamiento Crítico</i>
-                        <i class="fa-solid fa-brain"> Creatividad</i>
-                        <i class="fa-regular fa-heart"> Inteligencia Emocional</i>
-                        <i class="fa-solid fa-check-double"> Toma de Decisiones</i>
-                        <i class="fa-regular fa-handshake"> Habilidades Interpersonales</i>
-                        <i class="fa-solid fa-list-check"> Multitarea</i>
-                        <i class="fa-solid fa-calendar-week"> Organización</i>
-                        <i class="fa-solid fa-shield"> Resiliencia</i>
+            <h2 class="tituloSkills" data-i18n="skills.technical">💻 Technical Skills</h2>
+            <div class="technicalSkills">
+                <i class="fa-brands fa-html5">Html5</i>
+                <i class="fa-brands fa-css">Css</i>
+                <i class="fa-brands fa-js">JS (ES6+)</i>
+                <i class="fa-brands fa-python">Python</i>
+                <i class="fa-solid fa-database">SQL</i>
+                <i class="fa-solid fa-cubes">React</i>
+                <i class="fa-solid fa-cubes">Git</i>
+                <i class="fa-solid fa-cubes">GitHub</i>
+                <i class="fa-solid fa-cubes">Power BI</i>
+                <i class="fa-solid fa-diagram-project">Agile Methodologies</i>
+                <i class="fa-solid fa-check-double">Data Verification</i>
+                <i class="fa-solid fa-folder-tree">Document Management</i>
             </div>
 
-            <h2 class="tituloSkills">📦 Others Skills</h2>
-            <!-- Contenido de habilidades varias -->
-                <div class="othersSkills">
-                        <i class="fa-solid fa-file-excel"> Excel (Avanzado)</i>
-                        <i class="fa-solid fa-file-word"> Word</i>
-                        <i class="fa-solid fa-file-powerpoint"> PowerPoint</i>
-                        <i class="fa-brands fa-google"> Google Sheets</i>
-                        <i class="fa-brands fa-google"> Google Docs</i>
-                        <i class="fa-brands fa-google"> Google Slides</i>
-                        <i class="fa-brands fa-google"> Google Forms</i>
+            <h2 class="tituloSkills" data-i18n="skills.professional">👔 Professional Skills</h2>
+            <div class="professionalSkills">
+                <i class="fa-solid fa-people-arrows">Leadership</i>
+                <i class="fa-solid fa-calendar-check">Event Coordination</i>
+                <i class="fa-solid fa-headset">Customer Service</i>
+                <i class="fa-solid fa-users">Team Management</i>
+                <i class="fa-solid fa-brain">Problem Solving</i>
+                <i class="fa-solid fa-hand-peace">Adaptability</i>
+                <i class="fa-solid fa-clock">Work Under Pressure</i>
+                <i class="fa-solid fa-magnifying-glass">Attention to Detail</i>
+                <i class="fa-solid fa-comments">Communication</i>
+                <i class="fa-solid fa-handshake">Conflict Resolution</i>
+                <i class="fa-solid fa-hourglass-half">Time Management</i>
+                <i class="fa-solid fa-bullseye">Results-Oriented</i>
+            </div>
 
-                </div>
-            <h2 class="tituloSkills">🌟 Unique Skills</h2>
-                    <div class="uniqueSkills">
-                        <i class="fa-solid fa-bug"> Apicultura</i>
-                        <i class="fa-solid fa-bolt"> Electricidad Básica</i>
-                        <i class="fa-solid fa-campground"> Liderazgo Scout</i>
-                        <i class="fa-solid fa-kitchen-set"> Cocina Profesional</i>
-                        <i class="fa-solid fa-file-signature"> Formulación de Proyectos</i>
-                        <i class="fa-solid fa-thermometer-half"> Conservación de Alimentos</i>
-                    </div>
-            
-            <h2 class="tituloSkills">🌐 Languages</h2>
-                    <div class="languagesSkills">
-                        <i class="fa-solid fa-language"> Spanish (Native)</i>
-                        <i class="fa-solid fa-language"> English (Intermediate - B2)</i>
+            <h2 class="tituloSkills" data-i18n="skills.soft">🧠 Soft Skills</h2>
+            <div class="softSkills">
+                <i class="fa-regular fa-lightbulb">Pensamiento Crítico</i>
+                <i class="fa-solid fa-brain">Creatividad</i>
+                <i class="fa-regular fa-heart">Inteligencia Emocional</i>
+                <i class="fa-solid fa-check-double">Toma de Decisiones</i>
+                <i class="fa-regular fa-handshake">Habilidades Interpersonales</i>
+                <i class="fa-solid fa-list-check">Multitarea</i>
+                <i class="fa-solid fa-calendar-week">Organización</i>
+                <i class="fa-solid fa-shield">Resiliencia</i>
+            </div>
 
-                    </div>
+            <h2 class="tituloSkills" data-i18n="skills.others">📦 Others Skills</h2>
+            <div class="othersSkills">
+                <i class="fa-solid fa-file-excel">Excel (Avanzado)</i>
+                <i class="fa-solid fa-file-word">Word</i>
+                <i class="fa-solid fa-file-powerpoint">PowerPoint</i>
+                <i class="fa-brands fa-google">Google Sheets</i>
+                <i class="fa-brands fa-google">Google Docs</i>
+                <i class="fa-brands fa-google">Google Slides</i>
+                <i class="fa-brands fa-google">Google Forms</i>
+            </div>
 
-</body>
-<footer class="footer">
-        <p>Este portafolio lo construí paso a paso, aprendiendo cada línea. Recibí mentoría y orientación de ‘La Ballena’ 🐋, un desarrollador con años de experiencia que me guió en la arquitectura, buenas prácticas y debugging. Todo el código fue escrito por mí, entendiendo cada decisión.</p>
+            <h2 class="tituloSkills" data-i18n="skills.unique">🌟 Unique Skills</h2>
+            <div class="uniqueSkills">
+                <i class="fa-solid fa-bug">Apicultura</i>
+                <i class="fa-solid fa-bolt">Electricidad Básica</i>
+                <i class="fa-solid fa-campground">Liderazgo Scout</i>
+                <i class="fa-solid fa-kitchen-set">Cocina Profesional</i>
+                <i class="fa-solid fa-file-signature">Formulación de Proyectos</i>
+                <i class="fa-solid fa-thermometer-half">Conservación de Alimentos</i>
+            </div>
+
+            <h2 class="tituloSkills" data-i18n="skills.languages">🌐 Languages</h2>
+            <div class="languagesSkills">
+                <i class="fa-solid fa-language">Spanish (Native)</i>
+                <i class="fa-solid fa-language">English (Intermediate - B2)</i>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p data-i18n="footer.text">Este portafolio lo construí paso a paso, aprendiendo cada línea. Recibí mentoría y orientación de ‘La Ballena’ 🐋, un desarrollador con años de experiencia que me guió en la arquitectura, buenas prácticas y debugging. Todo el código fue escrito por mí, entendiendo cada decisión.</p>
+        <p><a href="#" id="reset-lang" style="color: var(--mostaza); text-decoration: underline; cursor: pointer;">🌐 Cambiar idioma / Change language</a></p>
         <i class="fa-solid fa-dragon"></i>
+        
     </footer>
+</body>
 </html>
