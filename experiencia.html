@@ -3,112 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sergio Luilly Cabrera Dorado - Portafolio comercial</title>
+    <title data-i18n="experiencia.title">Sergio Luilly Cabrera Dorado - Experiencia</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/0ab2b19b31.js" crossorigin="anonymous"></script>
-    <script src="age.js"></script>
-    
+    <script src="i18n.js" defer></script>
 </head>
 <body>
-<header>
-    <div class="head_bar">
-        <div class="barLeft">
-            <p class="nombre-header">🍴 Luilly Cabs | Full Stack & Data</p>
-            <p class="tagline-header">Front-End Developer · Data Analyst · Scout · Cocinero</p>
+    <header>
+        <div class="head_bar">
+            <p class="barLeft" data-i18n="header.nombre">🍴 Luilly Cabs | Full Stack & Data</p>
+            <div class="barRight">
+                <a href="index.html" data-i18n="nav.home">Home</a>
+                <a href="skills.html" data-i18n="nav.skills">Skills</a>
+                <a href="hobbies.html" data-i18n="nav.hobbies">Hobbies</a>
+                <a href="formacion.html" data-i18n="nav.formacion">Formación</a>
+                <a href="proyectos.html" data-i18n="nav.proyectos">Proyectos</a>
+                <a href="experiencia.html" data-i18n="nav.experiencia">Experiencia</a>
+                <p>luillycbs@gmail.com</p>
+            </div>
         </div>
-        <div class="barRight">
-            <a href="index.html">Home</a>
-            <a href="skills.html">Skills</a>
-            <a href="hobbies.html">Hobbies</a>
-            <a href="formacion.html">Formación</a>
-            <a href="proyectos.html">Proyectos</a>
-            <p>luillycbs@gmail.com</p>
-        </div>
-    </div>
-</header>
+    </header>
 
+    <main>
         <section class="experiencia-profesional">
-            <h1 class="tituloSeccion"><i class="fa-solid fa-briefcase"></i> Experiencia Profesional</h1>
+            <h1 class="tituloSeccion" data-i18n="experiencia.titulo_principal"><i class="fa-solid fa-briefcase"></i> Experiencia Profesional</h1>
             <div class="grid-experiencia">
-                <!-- Data Analyst FamilySearch -->
+
+                <!-- 1. FamilySearch -->
                 <div class="card-experiencia">
                     <div class="card-header">
                         <i class="fa-solid fa-database"></i>
-                        <h3>Data Analyst - Genealogical Records</h3>
+                        <h3 data-i18n="experiencia.familysearch.titulo">Data Analyst - Genealogical Records</h3>
                     </div>
-                    <p class="empresa">FamilySearch / Global Managed Services</p>
-                    <p class="fecha">Oct 2024 - Oct 2025</p>
+                    <p class="empresa" data-i18n="experiencia.familysearch.empresa">FamilySearch / Global Managed Services</p>
+                    <p class="fecha" data-i18n="experiencia.familysearch.fecha">Oct 2024 - Oct 2025</p>
                     <ul>
-                        <li>Verifiqué y validé más de 500 registros genealógicos por mes con 98%+ de precisión.</li>
-                        <li>Organicé y digitalicé documentos de archivo, reduciendo el tiempo de búsqueda en un 30%.</li>
-                        <li>Superé los cupos mensuales de productividad en un 15% manteniendo estándares de calidad.</li>
+                        <li data-i18n="experiencia.familysearch.logro1">Verifiqué y validé más de 500 registros genealógicos por mes con 98%+ de precisión.</li>
+                        <li data-i18n="experiencia.familysearch.logro2">Organicé y digitalicé documentos de archivo, reduciendo el tiempo de búsqueda en un 30%.</li>
+                        <li data-i18n="experiencia.familysearch.logro3">Superé los cupos mensuales de productividad en un 15% manteniendo estándares de calidad.</li>
                     </ul>
                 </div>
 
-                <!-- Logistics Coordinator -->
+                <!-- 2. Logistics Coordinator -->
                 <div class="card-experiencia">
                     <div class="card-header">
                         <i class="fa-solid fa-calendar-check"></i>
-                        <h3>Logistics Coordinator</h3>
+                        <h3 data-i18n="experiencia.logistics.titulo">Logistics Coordinator</h3>
                     </div>
-                    <p class="empresa">Popayan Gastronomic Congress</p>
-                    <p class="fecha">2023 - 2025</p>
+                    <p class="empresa" data-i18n="experiencia.logistics.empresa">Popayan Gastronomic Congress</p>
+                    <p class="fecha" data-i18n="experiencia.logistics.fecha">2023 - 2025</p>
                     <ul>
-                        <li>Coordiné logística para evento cultural con más de 100 vendedores, expositores y asistentes durante 3 años consecutivos.</li>
-                        <li>Reduje el tiempo de coordinación en un 20% optimizando los procesos de registro y onboarding.</li>
-                        <li>Logré ejecución a tiempo con cero incidentes críticos.</li>
+                        <li data-i18n="experiencia.logistics.logro1">Coordiné logística para evento cultural con más de 100 vendedores, expositores y asistentes durante 3 años consecutivos.</li>
+                        <li data-i18n="experiencia.logistics.logro2">Reduje el tiempo de coordinación en un 20% optimizando los procesos de registro y onboarding.</li>
+                        <li data-i18n="experiencia.logistics.logro3">Logré ejecución a tiempo con cero incidentes críticos.</li>
                     </ul>
                 </div>
 
-                <!-- National Exam Delegate -->
+                <!-- 3. National Exam Delegate -->
                 <div class="card-experiencia">
                     <div class="card-header">
                         <i class="fa-solid fa-file-signature"></i>
-                        <h3>National Exam Delegate</h3>
+                        <h3 data-i18n="experiencia.delegate.titulo">National Exam Delegate</h3>
                     </div>
-                    <p class="empresa">ASD / TK Logistics / Movexa / ICFES</p>
-                    <p class="fecha">2021 - 2025</p>
+                    <p class="empresa" data-i18n="experiencia.delegate.empresa">ASD / TK Logistics / Movexa / ICFES</p>
+                    <p class="fecha" data-i18n="experiencia.delegate.fecha">2021 - 2025</p>
                     <ul>
-                        <li>Supervisé la administración de exámenes estandarizados (Saber 11, Saber Pro, TyT) para más de 200 examinandos por sesión.</li>
-                        <li>Coordiné a más de 10 personas por sesión, garantizando 100% de cumplimiento de protocolos.</li>
-                        <li>Resolví desafíos logísticos en tiempo real durante más de 4 años.</li>
+                        <li data-i18n="experiencia.delegate.logro1">Supervisé la administración de exámenes estandarizados (Saber 11, Saber Pro, TyT) para más de 200 examinandos por sesión.</li>
+                        <li data-i18n="experiencia.delegate.logro2">Coordiné a más de 10 personas por sesión, garantizando 100% de cumplimiento de protocolos.</li>
+                        <li data-i18n="experiencia.delegate.logro3">Resolví desafíos logísticos en tiempo real durante más de 4 años.</li>
                     </ul>
                 </div>
 
-                <!-- Hotel Receptionist -->
+                <!-- 4. Hotel Receptionist -->
                 <div class="card-experiencia">
                     <div class="card-header">
                         <i class="fa-solid fa-hotel"></i>
-                        <h3>Hotel Receptionist</h3>
+                        <h3 data-i18n="experiencia.hotel.titulo">Hotel Receptionist</h3>
                     </div>
-                    <p class="empresa">Hotel Norte, Popayán</p>
-                    <p class="fecha">2019 - 2024 (5 años)</p>
+                    <p class="empresa" data-i18n="experiencia.hotel.empresa">Hotel Norte, Popayán</p>
+                    <p class="fecha" data-i18n="experiencia.hotel.fecha">2019 - 2024 (5 años)</p>
                     <ul>
-                        <li>Atención al cliente nacional e internacional, manteniendo altos niveles de satisfacción.</li>
-                        <li>Gestión de reservas, facturación y operaciones administrativas sin discrepancias.</li>
+                        <li data-i18n="experiencia.hotel.logro1">Atención al cliente nacional e internacional, manteniendo altos niveles de satisfacción.</li>
+                        <li data-i18n="experiencia.hotel.logro2">Gestión de reservas, facturación y operaciones administrativas sin discrepancias.</li>
                     </ul>
                 </div>
 
-                <!-- Professional Cook -->
+                <!-- 5. Professional Cook -->
                 <div class="card-experiencia">
                     <div class="card-header">
                         <i class="fa-solid fa-kitchen-set"></i>
-                        <h3>Professional Cook</h3>
+                        <h3 data-i18n="experiencia.cook.titulo">Professional Cook</h3>
                     </div>
-                    <p class="empresa">Mediterranean & International Cuisine, Popayán</p>
-                    <p class="fecha">2019 - 2024 (5 años)</p>
+                    <p class="empresa" data-i18n="experiencia.cook.empresa">Mediterranean & International Cuisine, Popayán</p>
+                    <p class="fecha" data-i18n="experiencia.cook.fecha">2019 - 2024 (5 años)</p>
                     <ul>
-                        <li>Preparé platos mediterráneos, colombianos e internacionales en entornos de alta demanda.</li>
-                        <li>Mantuve estándares de calidad y presentación, contribuyendo a la satisfacción del cliente.</li>
+                        <li data-i18n="experiencia.cook.logro1">Preparé platos mediterráneos, colombianos e internacionales en entornos de alta demanda.</li>
+                        <li data-i18n="experiencia.cook.logro2">Mantuve estándares de calidad y presentación, contribuyendo a la satisfacción del cliente.</li>
                     </ul>
                 </div>
+
             </div>
         </section>
+    </main>
 
+    <footer class="footer">
+        <p data-i18n="footer.text">Este portafolio lo construí paso a paso, aprendiendo cada línea. Recibí mentoría y orientación de ‘La Ballena’ 🐋, un desarrollador con años de experiencia que me guió en la arquitectura, buenas prácticas y debugging. Todo el código fue escrito por mí, entendiendo cada decisión.</p>
+        <p><a href="#" id="reset-lang" style="color: var(--mostaza); text-decoration: underline; cursor: pointer;">🌐 Cambiar idioma / Change language</a></p>
+        <i class="fa-solid fa-dragon"></i>
+    </footer>
 </body>
-<footer class="footer">
-    <p>Este portafolio lo construí paso a paso, aprendiendo cada línea. Recibí mentoría y orientación de ‘La Ballena’ 🐋, un desarrollador con años de experiencia que me guió en la arquitectura, buenas prácticas y debugging. Todo el código fue escrito por mí, entendiendo cada decisión.</p>
-    <i class="fa-solid fa-dragon"></i>
-</footer>
-</html>
 </html>

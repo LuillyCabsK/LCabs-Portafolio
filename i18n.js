@@ -1,7 +1,8 @@
-// i18n.js - Traducciones + ventana modal + botón de reset
+// i18n.js - Traducciones completas + edad dinámica + modal de idioma + botón reset
+
 const translations = {
     es: {
-        // Header
+        // ===== HEADER =====
         "nav.home": "Inicio",
         "nav.skills": "Habilidades",
         "nav.hobbies": "Pasatiempos",
@@ -9,7 +10,8 @@ const translations = {
         "nav.proyectos": "Proyectos",
         "nav.experiencia": "Experiencia",
         "header.nombre": "🍴 Luilly Cabs | Full Stack & Data",
-        // Index
+
+        // ===== INDEX (PÁGINA PRINCIPAL) =====
         "index.title": "Sergio Luilly Cabrera Dorado - Portafolio comercial",
         "index.titulo": "Sergio Luilly Cabrera Dorado",
         "index.presentacion": "Soy un hombre colombiano de <span id='age'></span> años, miembro de la hermandad scout desde los 11 años. Experto en formulación de proyectos, apicultura y dirección de equipos. Conocimientos en programación, agroindustrias, preparación y conservación de alimentos.",
@@ -27,9 +29,11 @@ const translations = {
         "hobby.leer": "Leer novelas fantásticas",
         "hobby.scout": "Escultismo",
         "hobby.pesca": "Pesca",
-        // Footer
+
+        // ===== FOOTER =====
         "footer.text": "Este portafolio lo construí paso a paso, aprendiendo cada línea. Recibí mentoría y orientación de ‘La Ballena’ 🐋, un desarrollador con años de experiencia que me guió en la arquitectura, buenas prácticas y debugging. Todo el código fue escrito por mí, entendiendo cada decisión.",
-        // Skills page
+
+        // ===== SKILLS =====
         "skills.title": "Luilly Cabs - Habilidades",
         "skills.technical": "💻 Habilidades Técnicas",
         "skills.professional": "👔 Habilidades Profesionales",
@@ -37,7 +41,8 @@ const translations = {
         "skills.others": "📦 Otras Habilidades",
         "skills.unique": "🌟 Habilidades Únicas",
         "skills.languages": "🌐 Idiomas",
-        // Formación page
+
+        // ===== FORMACIÓN =====
         "formacion.title": "Luilly Cabs - Formación Académica",
         "formacion.titulo_principal": "Formación Académica Profesional",
         "formacion.cursos_titulo": "Cursos",
@@ -61,13 +66,45 @@ const translations = {
         "formacion.powerbi.institucion": "SENA",
         "formacion.powerbi.fecha": "Certificación",
         "formacion.powerbi.descripcion": "Transformación de datos, modelado, creación de dashboards interactivos, DAX básico, e integración con Excel y bases de datos.",
-        // Experiencia page
-        "experiencia.titulo": "Experiencia Profesional",
-        // Hobbies page
+
+        // ===== EXPERIENCIA (NUEVO) =====
+        "experiencia.title": "Sergio Luilly Cabrera Dorado - Experiencia",
+        "experiencia.titulo_principal": "Experiencia Profesional",
+        "experiencia.familysearch.titulo": "Data Analyst - Registros Genealógicos",
+        "experiencia.familysearch.empresa": "FamilySearch / Global Managed Services",
+        "experiencia.familysearch.fecha": "Oct 2024 - Oct 2025",
+        "experiencia.familysearch.logro1": "Verifiqué y validé más de 500 registros genealógicos por mes con 98%+ de precisión.",
+        "experiencia.familysearch.logro2": "Organicé y digitalicé documentos de archivo, reduciendo el tiempo de búsqueda en un 30%.",
+        "experiencia.familysearch.logro3": "Superé los cupos mensuales de productividad en un 15% manteniendo estándares de calidad.",
+        "experiencia.logistics.titulo": "Coordinador de Logística",
+        "experiencia.logistics.empresa": "Congreso Gastronómico de Popayán",
+        "experiencia.logistics.fecha": "2023 - 2025",
+        "experiencia.logistics.logro1": "Coordiné logística para evento cultural con más de 100 vendedores, expositores y asistentes durante 3 años consecutivos.",
+        "experiencia.logistics.logro2": "Reduje el tiempo de coordinación en un 20% optimizando los procesos de registro y onboarding.",
+        "experiencia.logistics.logro3": "Logré ejecución a tiempo con cero incidentes críticos.",
+        "experiencia.delegate.titulo": "Delegado de Exámenes Nacionales",
+        "experiencia.delegate.empresa": "ASD / TK Logistics / Movexa / ICFES",
+        "experiencia.delegate.fecha": "2021 - 2025",
+        "experiencia.delegate.logro1": "Supervisé la administración de exámenes estandarizados (Saber 11, Saber Pro, TyT) para más de 200 examinandos por sesión.",
+        "experiencia.delegate.logro2": "Coordiné a más de 10 personas por sesión, garantizando 100% de cumplimiento de protocolos.",
+        "experiencia.delegate.logro3": "Resolví desafíos logísticos en tiempo real durante más de 4 años.",
+        "experiencia.hotel.titulo": "Recepcionista de Hotel",
+        "experiencia.hotel.empresa": "Hotel Norte, Popayán",
+        "experiencia.hotel.fecha": "2019 - 2024 (5 años)",
+        "experiencia.hotel.logro1": "Atención al cliente nacional e internacional, manteniendo altos niveles de satisfacción.",
+        "experiencia.hotel.logro2": "Gestión de reservas, facturación y operaciones administrativas sin discrepancias.",
+        "experiencia.cook.titulo": "Cocinero Profesional",
+        "experiencia.cook.empresa": "Cocina Mediterránea e Internacional, Popayán",
+        "experiencia.cook.fecha": "2019 - 2024 (5 años)",
+        "experiencia.cook.logro1": "Preparé platos mediterráneos, colombianos e internacionales en entornos de alta demanda.",
+        "experiencia.cook.logro2": "Mantuve estándares de calidad y presentación, contribuyendo a la satisfacción del cliente.",
+
+        // ===== HOBBIES =====
         "hobbies.title": "Luilly Cabs - Pasatiempos",
         "hobbies.titulo": "Mis Hobbies",
         "hobbies.desc": "Disfruto el aire libre, la lectura y el aprendizaje constante.",
-        // Proyectos page
+
+        // ===== PROYECTOS (HONEYCOMB) =====
         "proyectos.panel_titulo": "✨ Proyecto destacado",
         "proyectos.panel_desc": "Haz clic en un hexágono para conocer más sobre cada proyecto.",
         "proyectos.ver_demo": "Ver demo →",
@@ -86,8 +123,9 @@ const translations = {
         "proyecto.notas_titulo": "📊 Calculadora de Notas",
         "proyecto.notas_info": "Calcula tu nota necesaria para aprobar. React y lógica personalizada."
     },
+
     en: {
-        // Header
+        // ===== HEADER =====
         "nav.home": "Home",
         "nav.skills": "Skills",
         "nav.hobbies": "Hobbies",
@@ -95,7 +133,8 @@ const translations = {
         "nav.proyectos": "Projects",
         "nav.experiencia": "Experience",
         "header.nombre": "🍴 Luilly Cabs | Full Stack & Data",
-        // Index
+
+        // ===== INDEX =====
         "index.title": "Sergio Luilly Cabrera Dorado - Commercial Portfolio",
         "index.titulo": "Sergio Luilly Cabrera Dorado",
         "index.presentacion": "I am a <span id='age'></span>-year-old Colombian man, member of the scout brotherhood since age 11. Expert in project formulation, beekeeping and team leadership. Knowledge in programming, agribusiness, food preparation and preservation.",
@@ -113,9 +152,11 @@ const translations = {
         "hobby.leer": "Reading fantasy novels",
         "hobby.scout": "Scouting",
         "hobby.pesca": "Fishing",
-        // Footer
+
+        // ===== FOOTER =====
         "footer.text": "This portfolio was built step by step, learning each line. I received mentorship and guidance from ‘La Ballena’ 🐋, an experienced developer who guided me in architecture, best practices and debugging. All the code was written by me, understanding every decision.",
-        // Skills
+
+        // ===== SKILLS =====
         "skills.title": "Luilly Cabs - Skills",
         "skills.technical": "💻 Technical Skills",
         "skills.professional": "👔 Professional Skills",
@@ -123,7 +164,8 @@ const translations = {
         "skills.others": "📦 Other Skills",
         "skills.unique": "🌟 Unique Skills",
         "skills.languages": "🌐 Languages",
-        // Formación page (ENGLISH)
+
+        // ===== FORMACIÓN =====
         "formacion.title": "Luilly Cabs - Academic Education",
         "formacion.titulo_principal": "Professional Academic Education",
         "formacion.cursos_titulo": "Courses",
@@ -147,13 +189,45 @@ const translations = {
         "formacion.powerbi.institucion": "SENA",
         "formacion.powerbi.fecha": "Certification",
         "formacion.powerbi.descripcion": "Data transformation, modeling, interactive dashboard creation, basic DAX, and integration with Excel and databases.",
-        // Experiencia
-        "experiencia.titulo": "Professional Experience",
-        // Hobbies
+
+        // ===== EXPERIENCIA =====
+        "experiencia.title": "Sergio Luilly Cabrera Dorado - Experience",
+        "experiencia.titulo_principal": "Professional Experience",
+        "experiencia.familysearch.titulo": "Data Analyst - Genealogical Records",
+        "experiencia.familysearch.empresa": "FamilySearch / Global Managed Services",
+        "experiencia.familysearch.fecha": "Oct 2024 - Oct 2025",
+        "experiencia.familysearch.logro1": "Verified and validated over 500 genealogical records per month with 98%+ accuracy.",
+        "experiencia.familysearch.logro2": "Organized and digitized archival documents, reducing retrieval time by 30%.",
+        "experiencia.familysearch.logro3": "Consistently exceeded monthly productivity quotas by 15% while adhering to strict quality standards.",
+        "experiencia.logistics.titulo": "Logistics Coordinator",
+        "experiencia.logistics.empresa": "Popayan Gastronomic Congress",
+        "experiencia.logistics.fecha": "2023 - 2025",
+        "experiencia.logistics.logro1": "Coordinated end-to-end logistics for a cultural event with 100+ vendors, exhibitors, and attendees for 3 consecutive years.",
+        "experiencia.logistics.logro2": "Reduced coordination time by 20% by streamlining registration and onboarding processes.",
+        "experiencia.logistics.logro3": "Achieved on-time execution with zero critical incidents.",
+        "experiencia.delegate.titulo": "National Exam Delegate",
+        "experiencia.delegate.empresa": "ASD / TK Logistics / Movexa / ICFES",
+        "experiencia.delegate.fecha": "2021 - 2025",
+        "experiencia.delegate.logro1": "Supervised standardized national exam administration (Saber 11, Saber Pro, TyT) for 200+ test-takers per session.",
+        "experiencia.delegate.logro2": "Coordinated 10+ testing personnel per session, ensuring 100% compliance with institutional protocols.",
+        "experiencia.delegate.logro3": "Resolved logistical challenges in real-time for over 4 consecutive years.",
+        "experiencia.hotel.titulo": "Hotel Receptionist",
+        "experiencia.hotel.empresa": "Hotel Norte, Popayán",
+        "experiencia.hotel.fecha": "2019 - 2024 (5 years)",
+        "experiencia.hotel.logro1": "Delivered front desk and customer service to national and international guests, maintaining high satisfaction levels.",
+        "experiencia.hotel.logro2": "Managed reservations, billing, and daily administrative operations with zero discrepancies.",
+        "experiencia.cook.titulo": "Professional Cook",
+        "experiencia.cook.empresa": "Mediterranean & International Cuisine, Popayán",
+        "experiencia.cook.fecha": "2019 - 2024 (5 years)",
+        "experiencia.cook.logro1": "Prepared Mediterranean, Colombian and international dishes in high-demand kitchen environments.",
+        "experiencia.cook.logro2": "Maintained quality and plating standards, contributing to consistent guest satisfaction.",
+
+        // ===== HOBBIES =====
         "hobbies.title": "Luilly Cabs - Hobbies",
         "hobbies.titulo": "My Hobbies",
         "hobbies.desc": "I enjoy the outdoors, reading and continuous learning.",
-        // Proyectos
+
+        // ===== PROYECTOS =====
         "proyectos.panel_titulo": "✨ Featured Project",
         "proyectos.panel_desc": "Click on a hexagon to learn more about each project.",
         "proyectos.ver_demo": "View demo →",
@@ -174,9 +248,34 @@ const translations = {
     }
 };
 
+// ===== FUNCIONES PARA LA EDAD DINÁMICA =====
+function calcularEdad(year, month, day) {
+    const today = new Date();
+    const birthDate = new Date(year, month - 1, day);
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthActual = today.getMonth();
+    const dayActual = today.getDate();
+    const monthBirth = birthDate.getMonth();
+    const dayBirth = birthDate.getDate();
+    if (monthActual < monthBirth || (monthActual === monthBirth && dayActual < dayBirth)) {
+        age--;
+    }
+    return age;
+}
+
+function actualizarEdad() {
+    const edadSpan = document.getElementById('age');
+    if (edadSpan) {
+        const miEdad = calcularEdad(1992, 1, 19); // 19 de enero de 1992
+        edadSpan.textContent = miEdad;
+    }
+}
+
+// ===== FUNCIÓN PRINCIPAL PARA CAMBIAR IDIOMA =====
 function setLanguage(lang) {
     localStorage.setItem('preferredLanguage', lang);
     document.documentElement.lang = lang === 'es' ? 'es' : 'en';
+
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
@@ -187,14 +286,20 @@ function setLanguage(lang) {
             }
         }
     });
+
+    // Traducir atributos de hexágonos (honeycomb)
     document.querySelectorAll('.hex').forEach(hex => {
         const tituloKey = hex.getAttribute('data-titulo-key');
         const infoKey = hex.getAttribute('data-info-key');
         if (tituloKey && translations[lang][tituloKey]) hex.setAttribute('data-titulo', translations[lang][tituloKey]);
         if (infoKey && translations[lang][infoKey]) hex.setAttribute('data-info', translations[lang][infoKey]);
     });
+
+    // Actualizar la edad después de traducir (por si el span fue reemplazado)
+    actualizarEdad();
 }
 
+// ===== MODAL DE SELECCIÓN DE IDIOMA =====
 function showLanguageModal() {
     const modal = document.createElement('div');
     modal.id = 'lang-modal';
@@ -209,6 +314,7 @@ function showLanguageModal() {
     modal.style.justifyContent = 'center';
     modal.style.zIndex = '9999';
     modal.style.backdropFilter = 'blur(5px)';
+
     const box = document.createElement('div');
     box.style.backgroundColor = 'var(--hueso, #f5f0e1)';
     box.style.padding = '2rem';
@@ -217,14 +323,17 @@ function showLanguageModal() {
     box.style.boxShadow = '0 20px 35px rgba(0,0,0,0.3)';
     box.style.maxWidth = '300px';
     box.style.width = '80%';
+
     const title = document.createElement('h2');
     title.textContent = '🌐 Selecciona tu idioma';
     title.style.color = 'var(--azul-rey, #1e3a8a)';
     title.style.marginBottom = '1rem';
+
     const sub = document.createElement('p');
     sub.textContent = 'Choose your language';
     sub.style.marginBottom = '1.5rem';
     sub.style.color = '#444';
+
     const btnEs = document.createElement('button');
     btnEs.textContent = 'Español';
     btnEs.style.backgroundColor = 'var(--verde, #2a7f49)';
@@ -235,7 +344,12 @@ function showLanguageModal() {
     btnEs.style.margin = '0 0.5rem';
     btnEs.style.cursor = 'pointer';
     btnEs.style.fontSize = '1rem';
-    btnEs.onclick = () => { setLanguage('es'); document.body.removeChild(modal); location.reload(); };
+    btnEs.onclick = () => {
+        setLanguage('es');
+        document.body.removeChild(modal);
+        location.reload();
+    };
+
     const btnEn = document.createElement('button');
     btnEn.textContent = 'English';
     btnEn.style.backgroundColor = 'var(--mostaza, #e6a017)';
@@ -246,7 +360,12 @@ function showLanguageModal() {
     btnEn.style.margin = '0 0.5rem';
     btnEn.style.cursor = 'pointer';
     btnEn.style.fontSize = '1rem';
-    btnEn.onclick = () => { setLanguage('en'); document.body.removeChild(modal); location.reload(); };
+    btnEn.onclick = () => {
+        setLanguage('en');
+        document.body.removeChild(modal);
+        location.reload();
+    };
+
     box.appendChild(title);
     box.appendChild(sub);
     box.appendChild(btnEs);
@@ -255,12 +374,18 @@ function showLanguageModal() {
     document.body.appendChild(modal);
 }
 
+// ===== INICIALIZACIÓN CUANDO EL DOM ESTÁ LISTO =====
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferredLanguage');
-    if (!savedLang) showLanguageModal();
-    else setLanguage(savedLang);
+    if (!savedLang) {
+        showLanguageModal();
+    } else {
+        setLanguage(savedLang);
+        // Doble garantía: actualizar edad también aquí
+        actualizarEdad();
+    }
 
-    // Botón para restablecer idioma (si existe)
+    // Botón para restablecer idioma (si existe en el footer)
     const resetBtn = document.getElementById('reset-lang');
     if (resetBtn) {
         resetBtn.addEventListener('click', (e) => {
