@@ -1,0 +1,288 @@
+/* ============================================
+   ESTILOS PARA PÁGINAS DE RAMAS
+   CON PALETAS DE COLORES POR CADA RAMA
+   ONDAS NEGRAS ARRIBA Y ABAJO DE CADA SECCIÓN
+   ESPACIO ENTRE DIVS
+   ============================================ */
+
+/* Variables por defecto (fallback) */
+:root {
+    --rama-color-primary: #3a7d3a;
+    --rama-color-light: #f0f7ee;
+    --rama-color-accent: #e6b800;
+    --rama-color-text: #1b4d1b;
+    --rama-shadow: rgba(0,0,0,0.08);
+}
+
+/* ===== CACHORROS (Naranja) ===== */
+.page-cachorros {
+    --rama-color-primary: #d97a2b;
+    --rama-color-light: #fdf0e0;
+    --rama-color-accent: #d97a2b;
+    --rama-color-text: #6b3a1a;
+    --rama-shadow: rgba(217, 122, 43, 0.2);
+}
+
+/* ===== MANADA (Amarillo) ===== */
+.page-manada {
+    --rama-color-primary: #e6b800;
+    --rama-color-light: #fdf8e7;
+    --rama-color-accent: #e6b800;
+    --rama-color-text: #6b5a00;
+    --rama-shadow: rgba(230, 184, 0, 0.2);
+}
+
+/* ===== TROPA (Verde) ===== */
+.page-tropa {
+    --rama-color-primary: #2a7f49;
+    --rama-color-light: #e8f5ee;
+    --rama-color-accent: #2a7f49;
+    --rama-color-text: #1a4d2b;
+    --rama-shadow: rgba(42, 127, 73, 0.2);
+}
+
+/* ===== NÓMADAS (Azul) ===== */
+.page-nomadas {
+    --rama-color-primary: #1a6b8a;
+    --rama-color-light: #e2f0f5;
+    --rama-color-accent: #1a6b8a;
+    --rama-color-text: #0d3d52;
+    --rama-shadow: rgba(26, 107, 138, 0.2);
+}
+
+/* ===== ROVER (Rojo) ===== */
+.page-rover {
+    --rama-color-primary: #b22222;
+    --rama-color-light: #f5e8e8;
+    --rama-color-accent: #b22222;
+    --rama-color-text: #6b1515;
+    --rama-shadow: rgba(178, 34, 34, 0.2);
+}
+
+/* ===== DIRIGENTE (Gris) ===== */
+.page-dirigente {
+    --rama-color-primary: #6b6b6b;
+    --rama-color-light: #f0f0f0;
+    --rama-color-accent: #6b6b6b;
+    --rama-color-text: #3d3d3d;
+    --rama-shadow: rgba(107, 107, 107, 0.2);
+}
+
+/* ===== ESTILOS GENERALES ===== */
+
+/* Contenedor principal */
+.rama-content {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 245, 0.95);
+    backdrop-filter: blur(4px);
+    border-radius: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Cabecera */
+.rama-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--rama-color-accent);
+    padding-bottom: 1rem;
+}
+
+.rama-header h2 {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--rama-color-text);
+    flex: 1;
+}
+
+/* Imagen */
+.rama-imagen {
+    flex: 0 0 120px;
+    text-align: center;
+}
+
+.rama-imagen img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px var(--rama-shadow);
+    transition: transform 0.2s;
+}
+
+.rama-imagen img:hover {
+    transform: scale(1.05);
+}
+
+/* ===== SECCIONES CON ESPACIO ENTRE DIVS ===== */
+.rama-secciones {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* ← ESPACIO ENTRE CADA SECCIÓN */
+    align-items: stretch;
+}
+
+.rama-section {
+    padding: 1.5rem 1.8rem;
+    position: relative;
+    transition: all 0.3s ease;
+    border-radius: 16px;
+    max-width: 75%;
+    box-shadow: 0 2px 8px var(--rama-shadow);
+    background-color: var(--rama-color-light);
+    /* Espacio interno para que las ondas no tapen el contenido */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Alternancia: impares a la derecha, pares a la izquierda */
+.rama-section:nth-child(odd) {
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.rama-section:nth-child(even) {
+    align-self: flex-start;
+    margin-right: auto;
+}
+
+/* ===== ONDAS NEGRAS ARRIBA Y ABAJO DE CADA SECCIÓN ===== */
+.rama-section::before,
+.rama-section::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 30'%3E%3Cpath d='M0,15 Q150,30 300,15 T600,15 T900,15 T1200,15 L1200,30 L0,30 Z' fill='%23000000' opacity='0.15'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Onda superior */
+.rama-section::before {
+    top: -7px; /* Mitad de la altura para que sobresalga ligeramente */
+}
+
+/* Onda inferior */
+.rama-section::after {
+    bottom: -7px;
+}
+
+/* ===== PÁRRAFOS ===== */
+.rama-section p {
+    text-align: justify;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: var(--rama-color-text);
+}
+
+.rama-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Títulos */
+.rama-section h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--rama-color-primary);
+    font-size: 1.3rem;
+}
+
+.rama-section ul {
+    margin: 0;
+    line-height: 1.6;
+    padding-left: 1.5rem;
+    color: var(--rama-color-text);
+}
+
+/* Efecto hover */
+.rama-section:hover {
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 8px 20px var(--rama-shadow);
+    z-index: 2;
+    background-color: var(--rama-color-light);
+}
+
+/* ===== BOTÓN VOLVER ===== */
+.back-button {
+    display: inline-block;
+    margin-top: 2rem;
+    background: var(--rama-color-primary);
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background: var(--rama-color-accent);
+    color: var(--rama-color-text);
+    transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 700px) {
+    .rama-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .rama-header h2 {
+        text-align: center;
+    }
+
+    .rama-imagen {
+        flex: 0 0 90px;
+    }
+
+    .rama-content {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+
+    .rama-section {
+        max-width: 90%;
+        padding: 1rem 1.2rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .rama-section:nth-child(odd),
+    .rama-section:nth-child(even) {
+        align-self: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .rama-section h3 {
+        font-size: 1.1rem;
+    }
+
+    .rama-section::before,
+    .rama-section::after {
+        height: 12px;
+    }
+
+    .rama-section::before {
+        top: -6px;
+    }
+
+    .rama-section::after {
+        bottom: -6px;
+    }
+}
