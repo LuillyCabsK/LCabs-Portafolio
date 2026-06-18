@@ -267,3 +267,225 @@ body {
 .hex-emoji {
     animation: contragiro-emoji 40s linear infinite;
 }
+
+
+/* ============================================
+   SECCIÓN DE LA CAMISA SCOUT (COMPLETA)
+   ============================================ */
+
+/* Definir variables de color (por si no están en :root principal) */
+:root {
+    --rama-color-text: #2c3e50;
+}
+
+/* Contenedor principal */
+.camisa-section {
+    margin: 3rem auto;
+    text-align: center;
+    max-width: 1100px;
+    padding: 1rem;
+}
+
+/* Título */
+.camisa-section h3 {
+    font-size: 2.8rem;
+    color: var(--verde-cauca, #1b4d1b);
+    margin-bottom: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-bottom: 4px solid var(--amarillo-cauca, #e6b800);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+/* ===== FILA SUPERIOR: VIDEO + TEXTO ===== */
+.camisa-fila {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+/* Contenedor del video */
+.camisa-video {
+    flex: 1 1 50%;
+    min-width: 320px;
+    max-width: 600px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    background: rgba(0,0,0,0.03);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para el embed de Instagram */
+.camisa-video .instagram-media,
+.camisa-video blockquote {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 315px;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.camisa-video .instagram-media iframe {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 315px;
+    border: none !important;
+    background: transparent !important;
+    display: block !important;
+}
+
+.camisa-video .instagram-media::before,
+.camisa-video .instagram-media::after {
+    display: none !important;
+}
+
+/* Texto (derecha) */
+.camisa-texto {
+    flex: 1 1 40%;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 245, 0.6);
+    border-radius: 16px;
+    border-left: 6px solid var(--amarillo-cauca, #e6b800);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.camisa-texto p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--rama-color-text, #2c3e50);
+    margin-bottom: 0.8rem;
+}
+
+.camisa-texto cite {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px dashed #ccc;
+}
+
+/* ===== FILA INFERIOR: IMAGEN + DESCRIPCIÓN ===== */
+.camisa-imagen-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 245, 0.5);
+    border-radius: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    margin-top: 1rem;
+}
+
+.camisa-imagen {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 16px;
+    border: 5px solid var(--verde-cauca, #1b4d1b);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.camisa-imagen:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.camisa-descripcion {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--rama-color-text, #2c3e50);
+    text-align: justify;
+    max-width: 700px;
+    background: rgba(255, 255, 245, 0.7);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border-left: 5px solid var(--amarillo-cauca, #e6b800);
+    margin: 0;
+}
+
+.camisa-credito {
+    display: block;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+    background: rgba(255, 255, 245, 0.8);
+    padding: 0.4rem 1.2rem;
+    border-radius: 30px;
+    border-left: 4px solid var(--amarillo-cauca, #e6b800);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 820px) {
+    .camisa-fila {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .camisa-video {
+        flex: 1 1 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .camisa-texto {
+        flex: 1 1 100%;
+        max-width: 100%;
+        text-align: center;
+        border-left: none;
+        border-top: 6px solid var(--amarillo-cauca, #e6b800);
+        padding: 1.2rem 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .camisa-section h3 {
+        font-size: 2rem;
+    }
+
+    .camisa-descripcion {
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .camisa-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .camisa-video .instagram-media,
+    .camisa-video blockquote,
+    .camisa-video .instagram-media iframe {
+        min-height: 200px;
+    }
+
+    .camisa-imagen {
+        max-width: 260px;
+    }
+
+    .camisa-descripcion {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .camisa-texto p {
+        font-size: 0.95rem;
+    }
+}
