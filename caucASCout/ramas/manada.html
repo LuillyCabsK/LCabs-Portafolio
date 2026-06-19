@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Scouts Cauca | Movimiento Scout en el Cauca</title>
-    <link rel="stylesheet" href="styleCauca.css">
-    <!-- Fontawesome para íconos redes sociales -->
+    <title>Scouts Cauca - Lobatos</title>
+    <link rel="stylesheet" href="/caucASCout/styleCauca.css">
+    <link rel="stylesheet" href="/caucASCout/ramas/ramas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+ 
 </head>
 <body>
 
 <header class="scout-header">
     <div class="header-top">
-        <a href="#">🏕️ Únete a los scouts</a>
+        <a href="indexCauca.html">🏕️ Inicio</a>
         <a href="#">📅 Eventos</a>
     </div>
     <div class="header-bottom">
@@ -23,181 +25,83 @@
     </div>
 </header>
 
-<main>
-    <!-- SECCIÓN RAMAS / UNIDADES CON HONEYCOMB GIRATORIO -->
-    <section class="ramas-section">
-        <h2>🗺️ Nuestras ramas</h2>
-        <p class="ramas-sub">Pasa el mouse sobre el panal para pausar · Haz clic en cada hexágono para conocer más</p>
-
-        <div class="honeycomb-wrapper">
-            <div class="honeycomb-container">
-                <!-- Anillo giratorio (6 hexágonos exteriores) -->
-                <div class="honeycomb-orbit">
-                    <!-- Cachorros -->
-                    <button class="hex hex-p1" data-rama="cachorros" data-titulo="Cachorros" data-desc="Edad: 5-7 años. Desarrollo de confianza, juego y exploración. Primer contacto con el escultismo.">
-                        <div class="hex-bg"></div>
-                        <span class="hex-emoji">🐣</span>
-                        <span class="hex-text">Cachorros<br>5-7 años</span>
-                    </button>
-                    <!-- Manada -->
-                    <button class="hex hex-p2" data-rama="manada" data-titulo="Manada" data-desc="Edad: 7-11 años. Aprendizaje mediante la leyenda de Mowgli, vida al aire libre, trabajo en equipo.">
-                        <div class="hex-bg"></div>
-                        <span class="hex-emoji">🐺</span>
-                        <span class="hex-text">Manada<br>7-11 años</span>
-                    </button>
-                    <!-- Tropa -->
-                    <button class="hex hex-p3" data-rama="tropa" data-titulo="Tropa" data-desc="Edad: 11-15 años. Desarrollo de autonomía, especialidades, campamentos y servicios comunitarios.">
-                        <div class="hex-bg"></div>
-                        <span class="hex-emoji">🏹</span>
-                        <span class="hex-text">Tropa<br>11-15 años</span>
-                    </button>
-                    <!-- Nómadas Scout -->
-                    <button class="hex hex-p4" data-rama="nomadas" data-titulo="Nómadas Scout" data-desc="Edad: 15-18 años. Aventura, liderazgo, proyectos de impacto social y exploración.">
-                        <div class="hex-bg"></div>
-                        <span class="hex-emoji">⛰️</span>
-                        <span class="hex-text">Nómadas Scout<br>15-18 años</span>
-                    </button>
-                    <!-- Rover -->
-                    <button class="hex hex-p6" data-rama="rover" data-titulo="Rover" data-desc="Edad: 18-21 años. Servicio, desarrollo personal, proyectos internacionales, formación de líderes.">
-                        <div class="hex-bg"></div>
-                        <span class="hex-emoji">🚀</span>
-                        <span class="hex-text">Rover<br>18-21 años</span>
-                    </button>
-                    <!-- Dirigente -->
-                    <button class="hex hex-p7" data-rama="dirigente" data-titulo="Dirigente" data-desc="Adultos voluntarios que guían, forman y acompañan a los jóvenes. Capacitación y compromiso.">
-                        <div class="hex-bg"></div>
-                        <span class="hex-emoji">🧭</span>
-                        <span class="hex-text">Dirigente<br>Adultos</span>
-                    </button>
-                </div>
-
-                <!-- Hexágono central (estático) -->
-                <div class="hex hex-center" data-rama="central" data-titulo="Scouts Cauca" data-desc="Somos parte del Movimiento Scout en el Cauca, promoviendo valores, liderazgo y servicio desde 1920.">
-                    <span class="hex-emoji">🌿</span>
-                    <span class="hex-text">Scouts<br>Cauca</span>
-                </div>
-            </div>
-
-            <!-- Panel de información lateral (similar al portafolio) -->
-            <div class="info-panel" id="info-panel">
-                <h3 id="info-title">✨ Scouts Cauca</h3>
-                <p id="info-desc">Haz clic en una rama para conocer más sobre cada unidad educativa.</p>
-                <a href="#" id="info-link" class="btn-demo" style="display: none;">Más información →</a>
+<main class="page-manada">
+    <div class="rama-content">
+        <div class="rama-header">
+            <h2>🐾 Lobatos (7-10 años)</h2>
+            <div class="rama-imagen">
+                <img src="/caucASCout/assets/1_Insignia_Lobatos.svg"alt="Lobatos">
             </div>
         </div>
-    </section>
-
-    <!-- PRÓXIMOS EVENTOS -->
-    <div class="eventos">
-        <h3>📢 Próximos eventos</h3>
-        <div class="eventos-grid">
-            <div class="evento-card">
-                <h4>🌸 Semana Santa</h4>
-                <p>13-20 abril · Retiro espiritual</p>
+        
+        <div class="rama-secciones">
+            <div class="rama-section">
+                <h3>🌸 Oración del Lobato</h3>
+                <p>"Oh dulce y buen señor mio, <br> emseñame a ser Humilde y Bondadoso, <br> a imitar tu Ejemplo <br> amarte con todo mi Corazon <br> y a seguir el camino que me llevara al cielo junto a ti <br> San Francisco de Asis <br> Ruega por nosotros."</p>
             </div>
-            <div class="evento-card">
-                <h4>🏕️ RIO</h4>
-                <p>Reunión Interregional de Oficiales</p>
+            <div class="rama-section">
+                <h3>🌸 Lema del lobato</h3>
+                <p>"Siempre Mejor"</p>
             </div>
-            <div class="evento-card">
-                <h4>🔥 Campamento regional</h4>
-                <p>Junio 2026 · Sierra Caucana</p>
+            <div class="rama-section">
+                <h3>Ambiente de Referencia</h3>
+                <p>"El ambiente de referencia de los Lobatos son los relatos infantiles: historias sencillas y mágicas que despiertan
+                    la imaginación, transmiten valores y permiten a los niños reconocerse, expresarse y compartir en comunidad"</p>
+            </div>
+            <div class="rama-section">
+                <h3>📖 Marco simbólico</h3>
+                <p>El marco simbólico de los Lobatos se basa en el universo de "El libro de la selva" de Rudyard Kipling, donde los niños se identifican con personajes como Mowgli, Baloo y Bagheera. Este entorno mágico y lleno de aventuras permite a los Lobatos explorar valores como la amistad, el respeto por la naturaleza y el coraje, mientras se divierten y aprenden en comunidad.</p>
+                <p>El marco simbólico de la Manada despierta en ellos: <br>
+                ● Imaginación y curiosidad.<br>
+                ● Sentido de pertenencia.<br>
+                ● Identificación con personajes y relatos.<br>
+                ● Seguridad emocional dentro de un ambiente conocido.<br>
+                A través de la fantasía de la Selva, pueden explorar valores, reconocer conductas positivas y reflexionar sobre
+                sus acciones de forma natural y adecuada a su edad.</p>
+            </div>
+            <div class="rama-section">
+                <h3>Ley del lobato</h3>
+                        1. Escucha y respeta a los demás.<br>
+                        2. Dice siempre la verdad.<br>
+                        3. Es alegre y buen amigo.<br>
+                        4. Comparte con su familia.<br>
+                        5. Ayuda a los demás con alegría.<br>
+                        6. Ama y protege la naturaleza.<br>
+                        7. Escucha y aprende con emoción.<br>
+            </div>
+            <div class="rama-section">
+                <h3>Promesa del lobato</h3>
+                <p>“Yo (nombre del aspirante a ser Lobato), <br> prometo hacer siempre lo mejor,<br>  para cumplir mis deberes para con Dios y la Patria, <br> hacer un favor a alguien cada día, <br> y cumplir la Ley de la Manada”</p>
+            </div>
+            <div class="rama-section">
+                <h3>🎂 Edad</h3>
+                <p>De 7 a 10 años.</p>
+            </div>
+            <div class="rama-section">
+                <h3>🕊️ Patrono</h3>
+                <p>San Francisco de Asís (protector de los animales y la naturaleza).</p>
+            </div>
+            <div class="rama-section">
+                <h3>📚 Libros de interés</h3>
+                <ul>
+                    <li><strong>El libro de la selva</strong> (Rudyard Kipling)</li>
+                    <li><strong>Los cachorros</strong> – Manual de actividades para la rama.</li>
+                </ul>
             </div>
         </div>
+        
+        <a href="../indexCauca.html" class="back-button">← Volver al panal</a>
     </div>
 </main>
 
 <footer class="footer-scout">
     <div class="social-icons">
-        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
-    <div class="copyright">
-        <p>© 2026 Scouts Cauca — Construyendo un mejor futuro</p>
-        <p style="font-size:0.7rem; opacity:0.7;">Sitio en desarrollo · Desarrollado por Luilly Cabs para la comunidad scout del Cauca</p>
-    </div>
+    <div class="copyright"><p>© 2026 Scouts Cauca — Construyendo un mejor futuro</p></div>
 </footer>
 
-<!-- JavaScript externo -->
-<script src="scouts-cauca.js"></script>
-</body>
-</html><!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Scouts Cauca | Movimiento Scout en el Cauca</title>
-    <link rel="stylesheet" href="styleCauca.css">
-    <!-- Fontawesome para íconos redes sociales -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-
-<header class="scout-header">
-    <div class="header-top">
-        <a href="#">🏕️ Únete a los scouts</a>
-        <a href="#">📅 Eventos</a>
-    </div>
-    <div class="header-bottom">
-        <a href="#">📖 Sobre nosotros</a>
-        <a href="#">👥 Grupos scout</a>
-        <a href="#">🌱 Programa de jóvenes</a>
-        <a href="#">📚 Biblioteca</a>
-    </div>
-</header>
-
-<main>
-    <!-- SECCIÓN RAMAS / UNIDADES CON HONEYCOMB GIRATORIO -->
-    <section class="ramas-section">
-        <h2>🐺 Manada</h2>
-        <p class="ramas-sub">7 a 10 años</p>
-        <div class="rama-section">
-            <h3>🌸 Oración de la Manada</h3>
-            <p>"Oh dulce y buen señor mio, enseñame a ser humilde y bondadoso, a imitar tu ejemplo, amarte con todo mi corazon y a seguir el camino que me ha de llevar al cielo junto a ti. San francisco de asís. Ruega por nosotros. Amén."</p>
-        </div>
-
-        <div class="rama-section">
-            <h3>📖 Marco simbólico</h3>
-            <p>La rama de Cachorros se inspira en el libro "Los cachorros" de Rudyard Kipling. Los niños y niñas viven aventuras en la selva, aprendiendo valores como la lealtad, la obediencia y el trabajo en equipo a través del juego y la imaginación. El símbolo es la huella del cachorro y su color es el amarillo.</p>
-        </div>
-
-        <div class="rama-section">
-            <h3>🎂 Edad</h3>
-            <p>De 5 a 7 años.</p>
-        </div>
-
-        <div class="rama-section">
-            <h3>🕊️ Patrono</h3>
-            <p>San Francisco de Asís (protector de los animales y la naturaleza).</p>
-        </div>
-
-        <div class="rama-section">
-            <h3>📚 Libros de interés</h3>
-            <ul>
-                <li><strong>El libro de la selva</strong> (Rudyard Kipling) – versión adaptada para niños.</li>
-                <li><strong>Los cachorros</strong> – Manual de actividades para la rama.</li>
-                <li><strong>Aventuras en la manada</strong> – Cuentos scouts.</li>
-            </ul>
-        </div>
-
-        <a href="indexCauca.html" class="back-button">← Volver al panal</a>
-    </div>
-</main>
-
-<footer class="footer-scout">
-    <div class="social-icons">
-        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-    </div>
-    <div class="copyright">
-        <p>© 2026 Scouts Cauca — Construyendo un mejor futuro</p>
-        <p style="font-size:0.7rem; opacity:0.7;">Sitio en desarrollo · Desarrollado por Luilly Cabs para la comunidad scout del Cauca</p>
-    </div>
-</footer>
-
-<!-- JavaScript externo -->
-<script src="scouts-cauca.js"></script>
 </body>
 </html>

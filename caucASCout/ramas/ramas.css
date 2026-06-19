@@ -28,8 +28,8 @@
 /* ===== MANADA (Amarillo) ===== */
 .page-manada {
     --rama-color-primary: #e6b800;
-    --rama-color-light: #fdf8e7;
-    --rama-color-dark: #f5d742;
+    --rama-color-light: #fdd44d;
+    --rama-color-dark: #f5d742ad;
     --rama-color-accent: #e6b800;
     --rama-color-text: #6b5a00;
     --rama-shadow: rgba(230, 184, 0, 0.2);
