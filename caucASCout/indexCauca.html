@@ -6,23 +6,57 @@
     <title>🌱 Scouts Cauca | Movimiento Scout en el Cauca</title>
     <link rel="stylesheet" href="/caucASCout/styleCauca.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/caucASCout/galeria.js"></script>
 </head>
 <body>
 
 <header class="scout-header">
     <div class="header-top">
         <a href="#">🏕️ Únete a los scouts</a>
-        <a href="#">📅 Eventos</a>
+        <a href="#eventos">📅 Eventos</a>
     </div>
     <div class="header-bottom">
         <a href="#">📖 Sobre nosotros</a>
-        <a href="#">👥 Grupos scout</a>
-        <a href="#">🌱 Programa de jóvenes</a>
+        <a href="/caucASCout/gRUPOS/region.html">👥 Grupos scout</a>
+        <a href="#">🌱 Historia</a>
         <a href="#">📚 Biblioteca</a>
     </div>
 </header>
 
 <main>
+    <section class="hero-section">
+        <div class="galeria-noticias">
+            <h1>Noticias</h1>
+            <p>Bienvenido al sitio oficial del Movimiento Scout en el Cauca. Descubre nuestra Historia, eventos y cómo unirte a nuestra hermandad.</p>
+            <a href="#ramas" class="hero-button">INCRIBETE AQUI</a>
+        </div>
+         <!-- GALERÍA DE IMÁGENES -->
+   <div class="galeria-noticias">
+    <h2>📸 ÚLTIMOS ANUNCIOS </h2>
+    <div class="carrusel-contenedor">
+
+        <!-- Botón ANTERIOR -->
+        <button class="carrusel-btn carrusel-btn-izquierda" id="carrusel-prev" aria-label="Imagen anterior">
+            &#10094;
+        </button>
+
+        <!-- Imagen y pie -->
+        <div class="carrusel-slide" id="carrusel-slide">
+            <img id="carrusel-imagen" src="/caucASCout/assets/eventos/WhatsApp Image 2026-04-28 at 6.28.32 PM.jpeg" alt="Campamento regional">
+            <p id="carrusel-pie" class="carrusel-pie">Campamento regional - Sierra Caucana</p>
+        </div>
+
+        <!-- Botón SIGUIENTE -->
+        <button class="carrusel-btn carrusel-btn-derecha" id="carrusel-next" aria-label="Imagen siguiente">
+            &#10095;
+        </button>
+
+        <!-- Indicadores (puntos) -->
+        <div class="carrusel-indicadores" id="carrusel-indicadores"></div>
+    </div>
+</div>
+    </section>
+    <!-- SECCIÓN DE RAMAS -->
     <section class="ramas-section">
         <h2>🗺️ Nuestras ramas</h2>
         <p class="ramas-sub">Pasa el mouse sobre el panal para pausar · Haz clic en cada hexágono para conocer más sobre cada rama</p>
@@ -134,14 +168,19 @@
         <cite class="camisa-credito">Tomada de Asociación Scouts de Colombia</cite>
     </div>
 </div>
-    <div class="eventos">
+    <section class="eventos">
         <h3>📢 Próximos eventos</h3>
         <div class="eventos-grid">
-            <div class="evento-card"><h4>🌸 Semana Santa</h4><p>13-20 abril · Retiro espiritual</p></div>
-            <div class="evento-card"><h4>🏕️ RIO</h4><p>Reunión Interregional de Oficiales</p></div>
-            <div class="evento-card"><h4>🔥 Campamento regional</h4><p>Junio 2026 · Sierra Caucana</p></div>
+            <div class="evento-card"><h4>🌸 Semana Santa</h4><p>21-28 abril <br>Popayan </p></div>
+            <div class="evento-card">
+                <a href="https://www.instagram.com/enrecos.cauca/" target="_blank" rel="noopener noreferrer" style="display: block; text-decoration: none; color: inherit;">
+                    <h4>🏕️ RIO 2026</h4>
+        <p>Recuerdos,Insignias & Objetos del escultismo Caucano <BR>5 - 6 de septiembre <br> Popayan</p>
+    </a>
+</div>
+            <div class="evento-card"><h4>🔥 Campamento regional 2026</h4><p>Octubre </p></div>
         </div>
-    </div>
+    </section>
 </main>
 
 <footer class="footer-scout">

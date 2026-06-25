@@ -1,0 +1,411 @@
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.grupos-section {
+    padding: 2rem 1rem;
+    background: #f5f0eb; /* tono cálido, lo puedes cambiar */
+    text-align: center;
+}
+
+.grupos-section h2 {
+    font-size: 2.2rem;
+    color: #1e3c4f;
+    margin-bottom: 0.5rem;
+}
+
+.grupos-sub {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+/* ===== CONTENEDOR FLEX HORIZONTAL ===== */
+.grupos-container {
+    display: flex;
+    flex-wrap: wrap;          /* permite que bajen a la siguiente línea si no caben */
+    justify-content: center;  /* centra las tarjetas */
+    gap: 2rem;               /* separación entre tarjetas */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ===== TARJETA INDIVIDUAL ===== */
+.grupo-card {
+    flex: 0 0 220px;          /* ancho fijo de 220px */
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1rem 1rem 1.5rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    /* ===== MARCO DE 3 COLORES (border-image) ===== */
+    border: 6px solid transparent;  /* el ancho del marco */
+    border-image-slice: 1;          /* importante para que se vea el gradiente */
+}
+
+/* Efecto hover */
+.grupo-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+/* ===== IMAGEN DENTRO DE LA TARJETA ===== */
+.grupo-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;        /* cuadrada */
+    object-fit: cover;
+    border-radius: 12px;
+    background: #ddd;
+    margin-bottom: 0.8rem;
+}
+
+/* ===== TÍTULO Y TEXTO ===== */
+.grupo-card h3 {
+    font-size: 1.2rem;
+    margin: 0.4rem 0 0.2rem;
+    color: #1e3c4f;
+}
+
+.grupo-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* ===== BOTÓN ===== */
+.grupo-button {
+    display: inline-block;
+    background: #2b5f7a;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: background 0.2s;
+}
+
+.grupo-button:hover {
+    background: #1a4054;
+}
+
+/* ============================================ */
+/* ===== COLORES DE MARCO PARA CADA GRUPO ===== */
+/* ============================================ */
+
+/* ===== CONTENEDOR FLEX ===== */
+.grupo-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+}
+
+/* ===== CÍRCULO CON IMAGEN Y ANILLOS ===== */
+.circulo-anillos {
+    flex-shrink: 0;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    overflow: hidden;          /* para que la imagen quede dentro del círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #ddd; /* borde externo opcional */
+}
+
+/* ===== IMAGEN DENTRO DEL CÍRCULO ===== */
+.circulo-anillos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* para que la imagen cubra todo sin deformarse */
+    border-radius: 50%;
+}
+
+/* ===== ANILLOS DE COLOR (con box-shadow múltiple) ===== */
+/* La clave: usar box-shadow con spread para crear anillos */
+.circulo-anillos.grupo-5 {
+    box-shadow: 0 0 0 10px #FFD700,   /* anillo externo 1 */
+                0 0 0 20px #000000,   /* anillo externo 2 */
+                0 0 0 30px #FFD700;   /* anillo externo 3 */
+}
+
+.circulo-anillos.grupo-6 {
+    box-shadow: 0 0 0 10px #1E90FF,
+                0 0 0 20px #FFFFFF,
+                0 0 0 30px #1E90FF;
+}
+
+.circulo-anillos.grupo-8 {
+    box-shadow: 0 0 0 10px #FF69B4,
+                0 0 0 20px #FFD700,
+                0 0 0 30px #1E90FF;
+}
+
+.circulo-anillos.grupo-9 {
+    box-shadow: 0 0 0 10px #DC143C,
+                0 0 0 20px #1E90FF,
+                0 0 0 30px #FFFFFF;
+}
+
+.circulo-anillos.grupo-11 {
+    box-shadow: 0 0 0 10px #00CED1,
+                0 0 0 20px #32CD32,
+                0 0 0 30px #00CED1;
+}
+
+/* ===== TEXTO A LA DERECHA ===== */
+.grupo-text {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 700px) {
+    .grupo-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    .grupo-text {
+        text-align: center;
+    }
+    .circulo-anillos {
+        width: 200px;
+        height: 200px;
+    }
+    .circulo-anillos.grupo-5 { box-shadow: 0 0 0 7px #FFD700, 0 0 0 14px #000000, 0 0 0 21px #FFD700; }
+    .circulo-anillos.grupo-6 { box-shadow: 0 0 0 7px #1E90FF, 0 0 0 14px #FFFFFF, 0 0 0 21px #1E90FF; }
+    .circulo-anillos.grupo-8 { box-shadow: 0 0 0 7px #1E90FF, 0 0 0 14px #FF69B4, 0 0 0 21px #FFD700; }
+    .circulo-anillos.grupo-9 { box-shadow: 0 0 0 7px #DC143C, 0 0 0 14px #1E90FF, 0 0 0 21px #FFFFFF; }
+    .circulo-anillos.grupo-11 { box-shadow: 0 0 0 7px #00CED1, 0 0 0 14px #32CD32, 0 0 0 21px #00CED1; }
+}
+
+/* ============================================ */
+/* ===== SECCIÓN PAÑOLETA ===== */
+/* ============================================ */
+.pañoleta {
+    background: #f0f4f8;   /* fondo gris azulado claro */
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.pañoleta h2 {
+    color: #1e3c4f;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.pañoleta-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pañoleta-container img {
+    max-width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 1.2rem;
+}
+
+.pañoleta-container p {
+    font-size: 1.05rem;
+    color: #2d3748;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0.5rem auto;
+}
+
+.pañoleta-container ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 0.8rem;
+}
+
+.pañoleta-container ul li {
+    background: #dce4ed;
+    padding: 0.3rem 1.4rem;
+    border-radius: 30px;
+    font-weight: 500;
+    color: #1e3c4f;
+}
+
+/* ============================================ */
+/* ===== SECCIÓN UNIDADES ===== */
+/* ============================================ */
+.unidades {
+    background: #ffffff;   /* fondo blanco */
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.unidades h2 {
+    color: #1e3c4f;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.unidades-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.unidad-card {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 1.5rem 1.2rem;
+    flex: 1 1 220px;
+    max-width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border-left: 6px solid #2b5f7a; /* color por defecto */
+    text-align: left;
+}
+
+.unidad-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.unidad-card h3 {
+    color: #1e3c4f;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.unidad-card p {
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+/* Colores distintos para cada unidad (opcional) */
+.unidad-card:nth-child(1) { border-left-color: #FFD700; }  /* Manada */
+.unidad-card:nth-child(2) { border-left-color: #1E90FF; }  /* Tropa */
+.unidad-card:nth-child(3) { border-left-color: #32CD32; }  /* Comunidad */
+.unidad-card:nth-child(4) { border-left-color: #FF69B4; }  /* Clan */
+
+/* ============================================ */
+/* ===== SECCIÓN CONTACTO ===== */
+/* ============================================ */
+.contacto {
+    background: #1e3c4f;   /* azul oscuro */
+    color: #ffffff;
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.contacto h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contacto p {
+    font-size: 1.05rem;
+    max-width: 650px;
+    margin: 0 auto 1.2rem;
+    line-height: 1.6;
+    color: #e2e8f0;
+}
+
+.contacto ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contacto ul li {
+    background: rgba(255,255,255,0.12);
+    padding: 0.5rem 1.8rem;
+    border-radius: 30px;
+    font-weight: 500;
+    color: #edf2f7;
+}
+
+/* ============================================ */
+/* ===== SEPARADORES CON ONDAS (WAVES) ===== */
+/* ============================================ */
+.wave-divider {
+    position: relative;
+    height: 50px;
+    background: transparent;
+    overflow: hidden;
+}
+
+/* Onda que apunta hacia abajo (desde la sección anterior) */
+.wave-divider::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0 C300,80 600,120 900,40 C1050,10 1150,20 1200,30 L1200,120 L0,120 Z'/%3E%3C/svg%3E");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0 C300,80 600,120 900,40 C1050,10 1150,20 1200,30 L1200,120 L0,120 Z'/%3E%3C/svg%3E");
+    mask-size: 100% 100%;
+    -webkit-mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+}
+
+/* Asignamos colores a cada onda (debe coincidir con la sección de arriba) */
+.wave-divider.pañoleta-to-unidades {
+    background: #f0f4f8;   /* mismo color que .pañoleta */
+}
+
+.wave-divider.unidades-to-contacto {
+    background: #ffffff;   /* mismo color que .unidades */
+}
+
+/* ============================================ */
+/* ===== RESPONSIVE ===== */
+/* ============================================ */
+@media (max-width: 700px) {
+    .pañoleta-container ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.6rem;
+    }
+    .unidades-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .unidad-card {
+        max-width: 100%;
+        width: 100%;
+    }
+    .contacto ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+    .wave-divider {
+        height: 35px;
+    }
+}
+

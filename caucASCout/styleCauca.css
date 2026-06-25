@@ -489,3 +489,183 @@ body {
         font-size: 0.95rem;
     }
 }
+
+/*banner de eventos */
+/* ===== EVENTOS COMO BANNERS PEQUEÑOS ===== */
+.eventos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.evento-card {
+    background: white;
+    padding: 0.8rem 1.2rem;
+    border-radius: 20px;
+    width: 180px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    border-top: 3px solid var(--amarillo-cauca, #e6b800);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+}
+
+.evento-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+    border-top-color: var(--verde-cauca, #1b4d1b);
+}
+
+.evento-card h4 {
+    color: var(--verde-cauca, #1b4d1b);
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.evento-card p {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* ===== CARRUSEL AUTOMÁTICO CON BOTONES ===== */
+.galeria-noticias {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.galeria-noticias h2 {
+    color: var(--verde-cauca, #1b4d1b);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid var(--amarillo-cauca, #e6b800);
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+/* Contenedor del carrusel (relativo para posicionar botones) */
+.carrusel-contenedor {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    background: white;
+}
+
+.carrusel-slide {
+    width: 100%;
+    transition: opacity 0.8s ease;
+}
+
+.carrusel-slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.carrusel-pie {
+    padding: 0.8rem 1rem;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--verde-cauca, #1b4d1b);
+    background: rgba(255, 255, 245, 0.95);
+    border-top: 2px solid var(--amarillo-cauca, #e6b800);
+    text-align: center;
+}
+
+/* ===== BOTONES DE NAVEGACIÓN ===== */
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(27, 77, 27, 0.7);
+    color: white;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.carrusel-btn:hover {
+    background: var(--amarillo-cauca, #e6b800);
+    color: var(--verde-cauca, #1b4d1b);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.carrusel-btn-izquierda {
+    left: 12px;
+}
+
+.carrusel-btn-derecha {
+    right: 12px;
+}
+
+/* ===== INDICADORES (puntos) ===== */
+.carrusel-indicadores {
+    position: absolute;
+    bottom: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 5;
+}
+
+.carrusel-indicador {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.carrusel-indicador.activo {
+    background: var(--amarillo-cauca, #e6b800);
+    transform: scale(1.2);
+    border-color: var(--amarillo-cauca, #e6b800);
+}
+
+.carrusel-indicador:hover {
+    transform: scale(1.1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    .carrusel-slide img {
+        height: 250px;
+    }
+    .carrusel-pie {
+        font-size: 0.85rem;
+        padding: 0.5rem;
+    }
+    .carrusel-indicadores {
+        bottom: 50px;
+    }
+    .carrusel-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1.4rem;
+    }
+    .carrusel-btn-izquierda {
+        left: 8px;
+    }
+    .carrusel-btn-derecha {
+        right: 8px;
+    }
+}
